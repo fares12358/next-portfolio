@@ -12,6 +12,20 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        myBlack: "#1d1c22",
+        myGreen: "#00f594",
+      },
+      animationDelay: {
+        0: "0s",
+        0.5: "500ms",
+        1: "1000ms",
+        1.5: "1500ms",
+        // Add as many custom delays as you need
+      },
+      boxShadow: {
+        'my': '0px 12px 20px 0px #00000080',
+      }
     },
   },
   plugins: [],
