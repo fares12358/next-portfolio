@@ -75,7 +75,7 @@ export default function nav() {
               className={classNames(
                 item.current
                   ? " text-myGreen"
-                  : "hover:text-myGreen text-white hover:bg-black",
+                  : " text-white ",
                 "block rounded-md px-3 py-2 text-md font-bold"
               )}
             >
