@@ -10,6 +10,22 @@ import {
 import BgAnim from "./components/BgAnim";
 import { motion } from "framer-motion";
 export default function Home() {
+  const getCv = (e) => {
+    event.preventDefault();
+    let fileUrl = "/pdf/cv.pdf";
+
+    // Create a temporary anchor element
+    let link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = "cv.pdf";
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+  };
+
   return (
     <section className=" w-full h-[calc(100%-80px)] bg-transparent grid grid-cols-2 md:px-10 px-0 py-5">
       <BgAnim />
@@ -40,7 +56,10 @@ export default function Home() {
           className=" flex justify-around items-center flex-col md:flex-row  opacity-0 translate-y-3 anim-view "
           style={{ animationDelay: "0.8s" }}
         >
-          <button className="sm:text-lg text-base sm:w-[240px] w-[200px] h-[50px] md:mb-0 mb-10 xl:mb-0 text-myGreen border-2 border-myGreen px-5 py-2 rounded-3xl flex justify-around items-center">
+          <button
+            className="sm:text-lg text-base sm:w-[240px] w-[200px] h-[50px] md:mb-0 mb-10 xl:mb-0 text-myGreen border-2 border-myGreen px-5 py-2 rounded-3xl flex justify-around items-center"
+            onClick={getCv}
+          >
             <p>DownloadCV </p>
             <span className="h-[100%] w-[50px] flex items-center justify-center">
               <FontAwesomeIcon className="w-[50%]" icon={faDownload} />
@@ -51,25 +70,31 @@ export default function Home() {
               className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
               style={{ animationDelay: "1.4s" }}
             >
-              <FontAwesomeIcon icon={faFacebook} />
+              <a href="https://www.facebook.com/profile.php?id=100038710270979&mibextid=ZbWKwL" target="_blank">
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
             </li>
             <li
               className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
               style={{ animationDelay: "1.5s" }}
             >
-              <FontAwesomeIcon icon={faSquareWhatsapp} />
+                <FontAwesomeIcon icon={faSquareWhatsapp} />
             </li>
             <li
               className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
               style={{ animationDelay: "1.6s" }}
             >
-              <FontAwesomeIcon icon={faLinkedin} />
+              <a href="https://www.linkedin.com/in/fares-mohamed-74980a241/" target="_blank">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
             </li>
             <li
               className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
               style={{ animationDelay: "1.7s" }}
             >
-              <FontAwesomeIcon icon={faGithub} />
+              <a href="https://github.com/fares12358" target="_blank">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
             </li>
           </ul>
         </div>
