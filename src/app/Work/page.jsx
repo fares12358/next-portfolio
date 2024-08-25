@@ -64,9 +64,9 @@ const page = () => {
   const [listNum, setListNum] = useState(4);
 
   return (
-    <section className=" w-full h-[calc(100%-80px)] bg-transparent grid grid-cols-2 md:px-10 px-0 py-5">
+    <section className=" w-full h-[calc(100%-80px)] bg-transparent grid md:grid-cols-2  grid-cols-1 md:px-10 px-0 py-5">
       <BgAnim />
-      <div className="p-10 mt-20">
+      <div className="p-10 md:mt-20 order-2 md:order-1">
         <p
           className="text-5xl font-bold text-myGreen py-5 opacity-0 translate-y-3 anim-view relative"
           style={{ animationDelay: "0.6s" }}
@@ -95,7 +95,7 @@ const page = () => {
           className="bg-neutral-600 my-5 border-none py-[0.5px] w-[80%] mx-auto opacity-0 translate-y-3 anim-view relative"
           style={{ animationDelay: "0.5s" }}
         />
-        <div className="w-[250px] mx-auto flex justify-around items-center">
+        <div className="sm:w-[250px] w-full mx-auto flex justify-around items-center ">
           <div
             className=" bg-[#28272c] p-5 rounded-xl cursor-pointer opacity-0 -translate-x-3 anim-view relative"
             style={{ animationDelay: "0.7s" }}
@@ -238,13 +238,13 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center order-1 md:order-2">
         <div
-          className="image-holder flex justify-center items-center opacity-0 translate-x-3 anim-view relative"
+          className="image-holder flex justify-center items-center p-5 md:p-10 opacity-0 translate-x-3 anim-view relative"
           style={{ animationDelay: "0.7s" }}
         >
           <img
-            className="img-fluid glass p-10"
+            className="img-fluid glass p-5 sm:p-10"
             src={list[listNum][6]}
             alt="not found"
           />
