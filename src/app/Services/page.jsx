@@ -2,11 +2,11 @@ import React from "react";
 import BgAnim from "../components/BgAnim";
 const page = () => {
   return (
-    <section className=" w-full h-[calc(100%-80px)] bg-transparent grid lg:grid-cols-2 grid-cols-1  gap-10 p-5 lg:p-20">
+    <section className=" w-full h-[calc(100%-80px)] bg-transparent grid lg:grid-cols-2 grid-cols-1  gap-10 p-1 lg:p-20">
       <BgAnim />
       <div className="shadow-my text-white p-10 opacity-0 translate-y-3 anim-view "
         style={{ animationDelay: "0.6s" }}>
-        <p className="text-myGreen text-5xl font-bold">1</p>
+        <p className="text-myGreen text-5xl  font-bold ">1</p>
         <h1 className="text-3xl font-bold my-5">Web Development</h1>
         <p className="text-base font-medium text-neutral-500">
           Providing web development services using the latest technologies to
@@ -28,7 +28,7 @@ const page = () => {
       </div>
       <div className="shadow-my text-white p-10 opacity-0 translate-y-3 anim-view "
         style={{ animationDelay: "0.8s" }}>
-        <p className="text-myGreen text-5xl font-bold">2</p>
+        <p className="text-myGreen text-5xl font-bold">3</p>
         <h1 className="text-3xl font-bold my-5">SEO</h1>
         <p className="text-base font-medium text-neutral-500">
           Optimizing your sites to appear in the top search results on search
@@ -38,7 +38,7 @@ const page = () => {
       </div>
       <div className="shadow-my text-white p-10 opacity-0 translate-y-3 anim-view "
         style={{ animationDelay: "0.9s" }}>
-        <p className="text-myGreen text-5xl font-bold">2</p>
+        <p className="text-myGreen text-5xl font-bold">4</p>
         <h1 className="text-3xl font-bold my-5">Logo design</h1>
         <p className="text-base font-medium text-neutral-500">
           Creating unique and expressive logos that reflect the identity of your

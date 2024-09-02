@@ -31,26 +31,26 @@ export default function Home() {
       <BgAnim />
       <div className="text-holder col-span-2 xl:col-span-1 pt-10 px-10 font-bold text-white text-3xl order-2 xl:order-1 ">
         <p
-          className="  font-medium text-2xl my-5 opacity-0 -translate-y-3 anim-view "
+          className="  font-medium text-xl my-5 opacity-0 -translate-y-3 anim-view "
           style={{ animationDelay: "0.8s" }}
         >
           Software Developer
         </p>
         <h1
-          className="md:text-6xl text-5xl my-10 w-[80%]  opacity-0 -translate-y-3 anim-view "
+          className="md:text-5xl text-4xl my-10 w-[80%]  opacity-0 -translate-y-3 anim-view "
           style={{ animationDelay: "0.7s" }}
         >
           Hello I'm <br />
-          <span className="text-myGreen">Fares Mohamed</span>
+          <span className="text-myGreen text-5xl">Fares Mohamed</span>
         </h1>
         <p
           className="my-10 w-full md:text-2xl text-xl leading-9 tracking-normal opacity-0 translate-y-3 anim-view"
           style={{ animationDelay: "0.6s" }}
         >
           I'am a
-          <span className="text-myGreen text-3xl">front-end developer.</span>
+          <span className="text-myGreen text-2xl"> front-end developer.</span>
           <br /> I created this web site to introduce my self and my skills in
-          front - end coding . welcome.
+          <span className="text-myGreen text-2xl"> front-end</span> . welcome.
         </p>
         <div
           className=" flex justify-around items-center flex-col md:flex-row  opacity-0 translate-y-3 anim-view "
@@ -70,7 +70,10 @@ export default function Home() {
               className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
               style={{ animationDelay: "1.4s" }}
             >
-              <a href="https://www.facebook.com/profile.php?id=100038710270979&mibextid=ZbWKwL" target="_blank">
+              <a
+                href="https://www.facebook.com/profile.php?id=100038710270979&mibextid=ZbWKwL"
+                target="_blank"
+              >
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
             </li>
@@ -78,13 +81,16 @@ export default function Home() {
               className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
               style={{ animationDelay: "1.5s" }}
             >
-                <FontAwesomeIcon icon={faSquareWhatsapp} />
+              <FontAwesomeIcon icon={faSquareWhatsapp} />
             </li>
             <li
               className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
               style={{ animationDelay: "1.6s" }}
             >
-              <a href="https://www.linkedin.com/in/fares-mohamed-74980a241/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/fares-mohamed-74980a241/"
+                target="_blank"
+              >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </li>

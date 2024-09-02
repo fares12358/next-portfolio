@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHtml5, faCss3Alt, faJs } from "@fortawesome/free-brands-svg-icons";
 const Skills = () => {
   return (
     <div className="text-white p-5 flex flex-col justify-center items-center text-center md:text-left md:items-start">
@@ -9,26 +7,26 @@ const Skills = () => {
       <p className="text-neutral-500 font-base md:text-lg text-sm opacity-0 translate-y-3 anim-view relative"
         style={{ animationDelay: "0.5s" }}>
         Proficient in creating structured and semantic web pages using
-        <span className="text-myGreen">HTML5</span>. Skilled in designing
+        <span className="text-myGreen"> HTML5 </span>. Skilled in designing
         responsive and visually appealing layouts with
-        <span className="text-myGreen">CSS3</span>. Experienced in developing
+        <span className="text-myGreen"> CSS3 , SASS / SCSS </span>. Experienced in developing
         dynamic and interactive web applications using
-        <span className="text-myGreen">JavaScript</span>. Knowledgeable in using
-        <span className="text-myGreen">Bootstrap, Tailwind</span> frameworks for
+        <span className="text-myGreen"> JavaScript , TypeScript </span>. Knowledgeable in using
+        <span className="text-myGreen"> Bootstrap , Tailwind </span> frameworks for
         building responsive, mobile-first websites and creating custom designs.
         Proficient in version control using
-        <span className="text-myGreen">Git</span>
+        <span className="text-myGreen"> Git </span>
         for collaborative development. Adept at building modern web applications
-        with <span className="text-myGreen">React, Next.js</span>, focusing on
+        with <span className="text-myGreen"> React , Next.js </span>, focusing on
         component-based architecture. Experienced in using
-        <span className="text-myGreen">GitHub</span> for code hosting,
+        <span className="text-myGreen"> GitHub </span> for code hosting,
         collaboration, and version control. Familiar with
-        <span className="text-myGreen">jQuery</span>
+        <span className="text-myGreen"> jQuery </span>
         for simplifying JavaScript programming and handling events. Proficient
-        in working with <span className="text-myGreen">JSON</span> for data
-        interchange and <span className="text-myGreen">AJAX</span> for
+        in working with <span className="text-myGreen"> JSON </span> for data
+        interchange and <span className="text-myGreen"> AJAX </span> for
         asynchronous data retrieval. Also familiar with unit testing using
-        <span className="text-myGreen">Jest</span>.
+        <span className="text-myGreen"> Jest </span>.
       </p>
 
       <div className=" w-full my-10 rounded-md grid md:grid-cols-4 grid-cols-2 gap-5 p-4">

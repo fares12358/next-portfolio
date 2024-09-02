@@ -6,62 +6,74 @@ const page = () => {
     [
       "1",
       "Dental booking website",
-      "A simple design for booking website with admin Dashboard",
-      "Html 5, Css 3, Javascript , react and Tailwind",
+      "A simple design dentelcare booking website with admin Dashboard",
+      "Html 5 , Css 3 , Javascript , react and Tailwind , API",
       "https://github.com/fares12358/BookingDentist",
       "https://booking-dentist.vercel.app/",
       "/images/dentist.png",
-      "4",
+      "5",
       "1"
     ],
     [
       "2",
-      "Bondi landing page",
-      "A simple Bondi design for responsive web site",
-      "Html 5, Css 3, Javascript and bootstrap",
-      "https://github.com/fares12358/new-Bondi",
-      "https://fares12358.github.io/new-Bondi/",
-      "/images/Untitled (1).png",
+      "Travel App",
+      "A simple design for responsive travel web site",
+      "Html 5, Css 3, typescript , tailwind , next ,react",
+      "https://github.com/fares12358/Travel-app",
+      "https://travel-app-red-seven.vercel.app/",
+      "/images/travel-app.png",
       "0",
       "2"
 
     ],
     [
       "3",
-      "Mobile back cover",
-      "A simple e-commerce design for mobile cover",
-      "Html 5, Css 3, Javascript , react and bootstrap",
-      "https://github.com/fares12358/online-shop-with-react",
-      "https://fares12358.github.io/online-shop-with-react/",
-      "/images/backApp.png",
+      "Bondi landing page",
+      "A simple Bondi design for responsive web site",
+      "Html 5, Css 3, Javascript and bootstrap",
+      "https://github.com/fares12358/new-Bondi",
+      "https://fares12358.github.io/new-Bondi/",
+      "/images/Untitled (1).png",
       "1",
       "3"
+
     ],
     [
       "4",
+      "Mobile back cover",
+      "A simple e-commerce design for mobile cover",
+      "Html 5, Css 3, Javascript , react and bootstrap , JSON , APIs",
+      "https://github.com/fares12358/online-shop-with-react",
+      "https://fares12358.github.io/online-shop-with-react/",
+      "/images/backApp.png",
+      "2",
+      "4"
+    ],
+    [
+      "5",
       "island landing page",
       "A landing pag for travel island web site",
       "Html 5, Css 3, Javascript and bootstrap",
       "https://github.com/fares12358/island",
       "https://fares12358.github.io/island/",
       "/images/island.png",
-      "2",
-      "4"
+      "3",
+      "5"
     ],
     [
-      "5",
+      "6",
       "404 Page",
       "A 404 Error not found page design",
       "Html 5, Css 3, Javascript and bootstrap",
       "https://github.com/fares12358/Xcompany",
       "https://fares12358.github.io/Xcompany/",
       "/images/Untitled.png",
-      "3",
+      "4",
       "0"
     ],
   ];
 
-  const [listNum, setListNum] = useState(4);
+  const [listNum, setListNum] = useState(0);
 
   return (
     <section className=" w-full h-[calc(100%-80px)] bg-transparent grid md:grid-cols-2  grid-cols-1 md:px-10 px-0 py-5">
