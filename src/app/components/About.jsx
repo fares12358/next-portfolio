@@ -4,9 +4,10 @@ const About = () => {
   return (
     <div className="text-white p-5 flex flex-col justify-center items-center text-center md:text-left md:items-start">
       <h1 className="md:text-5xl text-4xl font-bold my-5 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.4s" }}>About me</h1>
+        style={{ animationDelay: "0.0s" }}>About me</h1>
       <p className="text-neutral-500 font-semibold md:text-lg text-sm opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.5s" }}>
+        style={{ animationDelay: "0.1s" }}>
+
         I am Fares, a passionate front-end developer with a strong foundation in
         HTML, CSS, JavaScript, and Bootstrap. Currently, I am a second-year
         student at New Cairo Technology College, specializing in Information
@@ -25,33 +26,33 @@ const About = () => {
       </p>
       <div className=" w-full my-10 rounded-md flex flex-col justify-center items-start p-4 md:text-2xl text-[15px]  text-start">
         <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.6s" }}>
+        style={{ animationDelay: "0.2s" }}>
           Name : <span className="text-white px-0 md:px-5 ">Fares Mohamed</span>
         </h1>
         <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.7s" }}>
+        style={{ animationDelay: "0.3s" }}>
           Phone : <span className="text-white px-0 md:px-5 ">01124711424</span>
         </h1>
         <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.8s" }}>
+        style={{ animationDelay: "0.4s" }}>
           Experience :{" "}
           <span className="text-white px-0 md:px-5 "> 2+ Years</span>
         </h1>
         <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.9s" }}>
+        style={{ animationDelay: "0.5s" }}>
           Nationality :
           <span className="text-white px-0 md:px-5 "> Egyptian</span>
         </h1>
         <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "1s" }}>
+        style={{ animationDelay: "0.6s" }}>
           Email :
           <span className="text-white px-0 md:px-5 "> fm883254@gmail.com</span>
         </h1>
         <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "1.1s" }}>
+        style={{ animationDelay: "0.7s" }}>
           Language :
           <span className="text-white px-0 md:px-5  opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "1.2s" }}>
+        style={{ animationDelay: "0.8s" }}>
             B1 English / A1 German
           </span>
         </h1>

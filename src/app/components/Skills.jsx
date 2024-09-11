@@ -3,9 +3,10 @@ const Skills = () => {
   return (
     <div className="text-white p-5 flex flex-col justify-center items-center text-center md:text-left md:items-start">
       <h1 className="md:text-5xl text-4xl font-bold my-5 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.4s" }}>Skills</h1>
+        style={{ animationDelay: "0.0s" }}>Skills</h1>
       <p className="text-neutral-500 font-base md:text-lg text-sm opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.5s" }}>
+        style={{ animationDelay: "0.1s" }}>
+
         Proficient in creating structured and semantic web pages using
         <span className="text-myGreen"> HTML5 </span>. Skilled in designing
         responsive and visually appealing layouts with
@@ -31,7 +32,7 @@ const Skills = () => {
 
       <div className=" w-full my-10 rounded-md grid md:grid-cols-4 grid-cols-2 gap-5 p-4">
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.4s" }}>
+        style={{ animationDelay: "0.2s" }}>
           <svg
             fill="#ffffff"
             version="1.1"
@@ -61,7 +62,7 @@ const Skills = () => {
           </svg>
         </div>
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.5s" }}>
+        style={{ animationDelay: "0.3s" }}>
           <svg
             fill="#ffffff"
             version="1.1"
@@ -91,7 +92,7 @@ const Skills = () => {
           </svg>
         </div>
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.6s" }}>
+        style={{ animationDelay: "0.4s" }}>
           <svg
             fill="#ffffff"
             viewBox="0 0 32 32"
@@ -113,7 +114,7 @@ const Skills = () => {
           </svg>
         </div>
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.7s" }}>
+        style={{ animationDelay: "0.5s" }}>
           <svg
             viewBox="0 0 15 15"
             fill="none"
@@ -138,7 +139,7 @@ const Skills = () => {
           </svg>
         </div>
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.8s" }}>
+        style={{ animationDelay: "0.6s" }}>
           <svg
             viewBox="0 0 256 256"
             version="1.1"
@@ -165,7 +166,7 @@ const Skills = () => {
           </svg>
         </div>
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.9s" }}>
+        style={{ animationDelay: "0.7s" }}>
           <svg
             fill="#ffffff"
             viewBox="0 0 32.00 32.00"
@@ -188,7 +189,7 @@ const Skills = () => {
           </svg>
         </div>
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "1s" }}>
+        style={{ animationDelay: "0.8s" }}>
           <svg
             fill="#ffffff"
             viewBox="0 -0.5 25 25"
@@ -209,7 +210,7 @@ const Skills = () => {
           </svg>
         </div>
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "1.1s" }}>
+        style={{ animationDelay: "0.9s" }}>
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -233,7 +234,7 @@ const Skills = () => {
           </svg>
         </div>
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "1.2s" }}>
+        style={{ animationDelay: "1s" }}>
           <svg
             fill="#ffffff"
             viewBox="0 0 24 24"
@@ -256,7 +257,7 @@ const Skills = () => {
           </svg>
         </div>
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "1.3s" }}>
+        style={{ animationDelay: "1.1s" }}>
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -281,7 +282,7 @@ const Skills = () => {
           </svg>
         </div>
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "1.4s" }}>
+        style={{ animationDelay: "1.2s" }}>
           <svg
             viewBox="0 0 20 20"
             version="1.1"
@@ -329,7 +330,7 @@ const Skills = () => {
           </svg>
         </div>
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "1.5s" }}>
+        style={{ animationDelay: "1.3s" }}>
           <svg
             fill="#ffffff"
             viewBox="0 0 32 32"
@@ -349,7 +350,7 @@ const Skills = () => {
           </svg>
         </div>
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "1.6s" }}>
+        style={{ animationDelay: "1.4s" }}>
           <svg
             fill="#ffffff"
             viewBox="0 0 32 32"
@@ -371,7 +372,7 @@ const Skills = () => {
           </svg>
         </div>
         <div className="bg-[#28272c] p-5 rounded-lg flex flex-col text-6xl opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "1.7s" }}>
+        style={{ animationDelay: "1.5s" }}>
           <svg
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"

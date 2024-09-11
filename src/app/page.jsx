@@ -49,8 +49,13 @@ export default function Home() {
         >
           I'am a
           <span className="text-myGreen text-2xl"> front-end developer.</span>
-          <br /> I created this web site to introduce my self and my skills in
-          <span className="text-myGreen text-2xl"> front-end</span> . welcome.
+          <br /> and I created this website to introduce myself and showcase my
+          skills in
+          <span className="text-myGreen text-2xl">
+            {" "}
+            front-end development
+          </span>{" "}
+          . Welcome!
         </p>
         <div
           className=" flex justify-around items-center flex-col md:flex-row  opacity-0 translate-y-3 anim-view "
@@ -159,19 +164,19 @@ export default function Home() {
           style={{ animationDelay: "1.3s" }}
         >
           <span className="text-myGreen text-5xl my-2">6</span>Projects
-          completed
+          Completed
         </div>
         <div
           className="flex flex-col justify-center items-center text-white sm:text-2xl text-xl font-bold shadow-my min-h-36 py-10 opacity-0 translate-y-3 anim-view "
           style={{ animationDelay: "1.2s" }}
         >
-          <span className="text-myGreen text-5xl my-2">11</span>Technologies
+          <span className="text-myGreen text-5xl my-2">14</span>Technologies
         </div>
         <div
           className="flex flex-col justify-center items-center text-white sm:text-2xl text-xl font-bold shadow-my min-h-36 py-10 opacity-0 translate-y-3 anim-view "
           style={{ animationDelay: "1.1s" }}
         >
-          <span className="text-myGreen text-5xl my-2">51</span>Code commits
+          <span className="text-myGreen text-5xl my-2">60</span>Code commits
         </div>
       </div>
     </section>

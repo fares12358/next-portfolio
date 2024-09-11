@@ -6,13 +6,13 @@ import Education from "../components/Education";
 import Skills from "../components/Skills";
 import About from "../components/About";
 const page = () => {
-  const [component, setComponent] = useState(<Experience />);
+  const [component, setComponent] = useState(<Experience indexD={0} />);
   const [mark, setMark] = useState(1);
   const getComponent = (e) => {
     event.preventDefault();
     console.log(e);
     if (e === 1) {
-      setComponent(<Experience />);
+      setComponent(<Experience indexD={1} />);
       setMark(1);
     } else if (e === 2) {
       setComponent(<Education />);
