@@ -116,7 +116,7 @@ export default function Home() {
       >
         <motion.div className="flex justify-center items-center">
           <div
-            className="image md:w-[400px] w-[300px] md:h-[400px] h-[300px] rounded-[50%] overflow-hidden  absolute bg-[url('/images/me.png')] bg-cover bg-center bg-myBlack "
+            className="image md:w-[400px] w-[300px] md:h-[400px] h-[300px] rounded-[50%] overflow-hidden  absolute bg-[url('/images/ME2.png')] bg-cover bg-center bg-myBlack "
             style={{
               boxShadow:
                 "inset 0 0 60px 10px #1d1c22 , inset 0 0 40px 20px #1d1c22 , inset 0 0 50px 30px #1d1c22",

@@ -2,7 +2,7 @@ import React from "react";
 import BgAnim from "../components/BgAnim";
 const page = () => {
   return (
-    <section className=" w-full h-[calc(100%-80px)] bg-transparent grid lg:grid-cols-2 grid-cols-1  gap-10 p-1 lg:p-20">
+    <section className=" w-full bg-transparent grid lg:grid-cols-2 grid-cols-1  gap-10 py-5 px-2 lg:p-20 ">
       <BgAnim />
       <div className="shadow-my text-white p-10 opacity-0 translate-y-3 anim-view "
         style={{ animationDelay: "0.6s" }}>

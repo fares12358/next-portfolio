@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="h-screen w-full bg-transparent overflow-hidden">
         <div className="main w-full h-full overflow-y-auto overflow-hidden">
-          <section className="main container mx-auto h-full w-full">
+          <section className="main container mx-auto h-full w-full ">
             <Nav />
             {children}
           </section>
