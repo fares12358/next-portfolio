@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   const getCv = (e) => {
     event.preventDefault();
-    let fileUrl = "/pdf/cv.pdf";
+    let fileUrl = "/pdf/cv2.pdf";
 
     // Create a temporary anchor element
     let link = document.createElement("a");
@@ -176,7 +176,7 @@ export default function Home() {
           className="flex flex-col justify-center items-center text-white sm:text-2xl text-xl font-bold shadow-my min-h-36 py-10 opacity-0 translate-y-3 anim-view "
           style={{ animationDelay: "1.1s" }}
         >
-          <span className="text-myGreen text-5xl my-2">60</span>Code commits
+          <span className="text-myGreen text-5xl my-2">65</span>Code commits
         </div>
       </div>
     </section>
