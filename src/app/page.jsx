@@ -9,6 +9,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import BgAnim from "./components/BgAnim";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { getDataFromGithub } from "@/utils/APIGithub";
 export default function Home() {
   const getCv = (e) => {
     event.preventDefault();
@@ -25,6 +27,24 @@ export default function Home() {
 
     document.body.removeChild(link);
   };
+
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [Error,setError]=useState('');
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const result = await getDataFromGithub();
+        setData(result);
+      } catch (error) {
+        setError("Failed to fetch data");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <section className=" w-full h-[calc(100%-80px)] bg-transparent grid grid-cols-2 md:px-10 px-0 py-5">
@@ -51,11 +71,8 @@ export default function Home() {
           <span className="text-myGreen text-2xl"> front-end developer.</span>
           <br /> and I created this website to introduce myself and showcase my
           skills in
-          <span className="text-myGreen text-2xl">
-            {" "}
-            front-end development
-          </span>{" "}
-          . Welcome!
+          <span className="text-myGreen text-2xl">front-end development</span>.
+          Welcome!
         </p>
         <div
           className=" flex justify-around items-center flex-col md:flex-row  opacity-0 translate-y-3 anim-view "
@@ -78,6 +95,7 @@ export default function Home() {
               <a
                 href="https://www.facebook.com/profile.php?id=100038710270979&mibextid=ZbWKwL"
                 target="_blank"
+                aria-label="facebook"
               >
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
@@ -95,6 +113,7 @@ export default function Home() {
               <a
                 href="https://www.linkedin.com/in/fares-mohamed-74980a241/"
                 target="_blank"
+                aria-label="linkedin"
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
@@ -103,7 +122,11 @@ export default function Home() {
               className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
               style={{ animationDelay: "1.7s" }}
             >
-              <a href="https://github.com/fares12358" target="_blank">
+              <a
+                href="https://github.com/fares12358"
+                target="_blank"
+                aria-label="github"
+              >
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </li>
@@ -116,7 +139,7 @@ export default function Home() {
       >
         <motion.div className="flex justify-center items-center">
           <div
-            className="image md:w-[400px] w-[300px] md:h-[400px] h-[300px] rounded-[50%] overflow-hidden  absolute bg-[url('/images/ME2.png')] bg-cover bg-center bg-myBlack "
+            className="image md:w-[400px] w-[300px] md:h-[400px] h-[300px] rounded-[50%] overflow-hidden  absolute bg-[url('/images/ME2_converted.webp')] bg-cover bg-center bg-myBlack "
             style={{
               boxShadow:
                 "inset 0 0 60px 10px #1d1c22 , inset 0 0 40px 20px #1d1c22 , inset 0 0 50px 30px #1d1c22",
@@ -156,27 +179,56 @@ export default function Home() {
           className="flex flex-col justify-center items-center text-white sm:text-2xl text-xl font-bold shadow-my min-h-36 py-10 opacity-0 translate-y-3 anim-view "
           style={{ animationDelay: "1.4s" }}
         >
-          <span className="text-myGreen text-5xl my-2">2</span>years of
-          experience
+          <span className="text-myGreen sm:text-5xl text-3xl my-2">2</span>years
+          of experience
         </div>
         <div
           className="flex flex-col justify-center items-center text-white sm:text-2xl text-xl font-bold shadow-my min-h-36 py-10 opacity-0 translate-y-3 anim-view "
           style={{ animationDelay: "1.3s" }}
         >
-          <span className="text-myGreen text-5xl my-2">6</span>Projects
-          Completed
+          {data.length > 0 && !loading  && Error === '' ? (
+            <>
+              <span className="text-myGreen sm:text-5xl text-3xl my-2">
+                {data[0].public_repos}
+              </span>
+              Repositories
+            </>
+          ) : (
+            Error === '' ?
+            <div className="loadingtext relative text-md rounded-md">
+              Loading
+            </div>
+            :
+            <div className="error text-red-500 text-md">{Error}</div>
+
+          )}
         </div>
         <div
           className="flex flex-col justify-center items-center text-white sm:text-2xl text-xl font-bold shadow-my min-h-36 py-10 opacity-0 translate-y-3 anim-view "
           style={{ animationDelay: "1.2s" }}
         >
-          <span className="text-myGreen text-5xl my-2">14</span>Technologies
+          <span className="text-myGreen sm:text-5xl text-3xl my-2">14</span>
+          Technologies
         </div>
         <div
           className="flex flex-col justify-center items-center text-white sm:text-2xl text-xl font-bold shadow-my min-h-36 py-10 opacity-0 translate-y-3 anim-view "
           style={{ animationDelay: "1.1s" }}
         >
-          <span className="text-myGreen text-5xl my-2">65</span>Code commits
+          {data.length > 0 && !loading && Error === ''? (
+            <>
+              <span className="text-myGreen sm:text-5xl text-3xl my-2">
+                {data[1]}
+              </span>
+              Code commits
+            </>
+          ) : (
+            Error === '' ?
+            <div className="loadingtext relative text-md rounded-md">
+              Loading
+            </div>
+            :
+            <div className="error text-red-500 text-md">{Error}</div>
+          )}
         </div>
       </div>
     </section>
