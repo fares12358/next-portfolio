@@ -35,6 +35,6 @@ export const getDataFromGithub = async () => {
 
     return [userAccount, totalCommits]; // Final result
   } catch (error) {
-    return [];
+    throw new Error('Failed to fetch data from GitHub');
   }
 };

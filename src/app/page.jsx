@@ -11,6 +11,7 @@ import BgAnim from "./components/BgAnim";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { getDataFromGithub } from "@/utils/APIGithub";
+import MyLoader from "./components/MyLoader";
 export default function Home() {
   const getCv = (e) => {
     event.preventDefault();
@@ -39,6 +40,7 @@ export default function Home() {
         setData(result);
       } catch (error) {
         setError("Failed to fetch data");
+        console.log(error);
       } finally {
         setLoading(false);
       }
@@ -194,12 +196,15 @@ export default function Home() {
               Repositories
             </>
           ) : (
-            Error === '' ?
-            <div className="loadingtext relative text-md rounded-md">
-              Loading
+            Error === '' ?(
+              <div className=" relative">
+              <MyLoader/>
             </div>
+            )
             :
-            <div className="error text-red-500 text-md">{Error}</div>
+            (
+              <div className="error text-red-500 text-[20px] font-mono text-center p-2">{Error}</div>
+            )
 
           )}
         </div>
@@ -223,11 +228,11 @@ export default function Home() {
             </>
           ) : (
             Error === '' ?
-            <div className="loadingtext relative text-md rounded-md">
-              Loading
+            <div className=" relative">
+              <MyLoader/>
             </div>
             :
-            <div className="error text-red-500 text-md">{Error}</div>
+            <div className="error text-red-500 text-[20px] font-mono text-center  p-2">{Error}</div>
           )}
         </div>
       </div>
