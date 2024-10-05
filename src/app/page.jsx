@@ -205,7 +205,6 @@ export default function Home() {
             (
               <div className="error text-red-500 text-[20px] font-mono text-center p-2">{Error}</div>
             )
-
           )}
         </div>
         <div

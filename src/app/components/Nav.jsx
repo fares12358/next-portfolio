@@ -13,10 +13,10 @@ function classNames(...classes) {
 export default function nav() {
 
   const [navigation, setNavigation] = useState([
-    { name: "Home", href: "/", current: (window.location.pathname === '/')?true:false },
-    { name: "Services", href: "/Services", current: (window.location.pathname === '/Services')?true:false },
-    { name: "Resume", href: "/Resume", current: (window.location.pathname === '/Resume')?true:false },
-    { name: "Work", href: "/Work", current: (window.location.pathname === '/Work')?true:false },
+    { name: "Home", href: "/", current: true },
+    { name: "Services", href: "/Services", current: false},
+    { name: "Resume", href: "/Resume", current: false },
+    { name: "Work", href: "/Work", current: false},
   ]);
   const handleClick =(clickedItem)=>{
     const updatedNavigation = navigation.map((item) => ({
