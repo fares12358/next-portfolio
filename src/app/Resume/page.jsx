@@ -10,7 +10,6 @@ const page = () => {
   const [mark, setMark] = useState(1);
   const getComponent = (e) => {
     event.preventDefault();
-    console.log(e);
     if (e === 1) {
       setComponent(<Experience indexD={1} />);
       setMark(1);
