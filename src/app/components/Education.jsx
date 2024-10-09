@@ -1,5 +1,4 @@
 import React from "react";
-
 const Education = () => {
   return (
     <div className="text-white p-5 flex flex-col justify-center items-center text-center md:text-left md:items-start">
@@ -30,5 +29,4 @@ const Education = () => {
     </div>
   );
 };
-
 export default Education;

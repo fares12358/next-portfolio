@@ -25,7 +25,16 @@ module.exports = {
       },
       boxShadow: {
         'my': '0px 12px 20px 0px #00000080',
-      }
+      },
+      keyframes: {
+        move: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        'infinite-line': 'move 5s linear infinite',
+      },
     },
   },
   plugins: [],

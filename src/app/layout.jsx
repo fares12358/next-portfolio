@@ -4,7 +4,6 @@ export const metadata = {
   title: "MY PORTFOLIO",
   description: "this is my portfolio",
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

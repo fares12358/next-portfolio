@@ -1,5 +1,4 @@
 import React from "react";
-
 const BgAnim = () => {
   return (
     <div className="anim-holder w-full h-full absolute top-0 left-0 grid grid-cols-4 -z-10">
@@ -19,5 +18,4 @@ const BgAnim = () => {
     </div>
   );
 };
-
 export default BgAnim;

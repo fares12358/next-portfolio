@@ -1,5 +1,4 @@
 import React from "react";
-
 const Experience = (props) => {
   const timingDelay=[["0.5s","0.6s","0.7s"],["0.0s","0.1s","0.3s"]]
   return (
@@ -20,5 +19,4 @@ const Experience = (props) => {
     </div>
   );
 };
-
 export default Experience;

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import {
   Disclosure,
   DisclosureButton,
@@ -6,26 +6,24 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import React,{useState} from "react";
+import React, { useState } from "react";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 export default function nav() {
-
   const [navigation, setNavigation] = useState([
     { name: "Home", href: "/", current: true },
-    { name: "Services", href: "/Services", current: false},
+    { name: "Services", href: "/Services", current: false },
     { name: "Resume", href: "/Resume", current: false },
-    { name: "Work", href: "/Work", current: false},
+    { name: "Work", href: "/Work", current: false },
   ]);
-  const handleClick =(clickedItem)=>{
+  const handleClick = (clickedItem) => {
     const updatedNavigation = navigation.map((item) => ({
       ...item,
       current: item.name === clickedItem.name,
     }));
     setNavigation(updatedNavigation);
-
-  }
+  };
   return (
     <Disclosure as="nav" className=" pt-4 sticky top-0 bg-myBlack z-50">
       <div className="mx-auto w-full px-2 sm:px-6 lg:px-8 ">
@@ -74,7 +72,6 @@ export default function nav() {
           </div>
         </div>
       </div>
-
       <DisclosurePanel className="sm:hidden  absolute w-full bg-myBlack pl-6">
         <div className="space-y-1 px-2 pb-3 pt-2">
           {navigation.map((item) => (

@@ -70,9 +70,7 @@ const page = () => {
       "0",
     ],
   ];
-
   const [listNum, setListNum] = useState(0);
-
   return (
     <section className=" w-full h-[calc(100%-80px)] bg-transparent grid md:grid-cols-2  grid-cols-1 md:px-10 px-0 py-5">
       <BgAnim />
@@ -258,5 +256,4 @@ const page = () => {
     </section>
   );
 };
-
 export default page;

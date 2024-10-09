@@ -15,23 +15,18 @@ import MyLoader from "./components/MyLoader";
 export default function Home() {
   const getCv = (e) => {
     event.preventDefault();
-    let fileUrl = "/pdf/cv2.pdf";
-
+    let fileUrl = "/pdf/cv.pdf";
     // Create a temporary anchor element
     let link = document.createElement("a");
     link.href = fileUrl;
     link.download = "cv.pdf";
-
     document.body.appendChild(link);
-
     link.click();
-
     document.body.removeChild(link);
   };
-
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [Error,setError]=useState('');
+  const [Error, setError] = useState("");
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -47,7 +42,6 @@ export default function Home() {
     };
     fetchData();
   }, []);
-
   return (
     <section className=" w-full h-[calc(100%-80px)] bg-transparent grid grid-cols-2 md:px-10 px-0 py-5">
       <BgAnim />
@@ -71,9 +65,9 @@ export default function Home() {
         >
           I'am a
           <span className="text-myGreen text-2xl"> front-end developer.</span>
-          <br /> and I created this website to introduce myself and showcase my
+          <br /> , and I created this website to introduce myself and showcase my
           skills in
-          <span className="text-myGreen text-2xl">front-end development</span>.
+          <span className="text-myGreen text-2xl"> front-end development skills. </span>
           Welcome!
         </p>
         <div
@@ -141,15 +135,14 @@ export default function Home() {
       >
         <motion.div className="flex justify-center items-center">
           <div
-            className="image md:w-[400px] w-[300px] md:h-[400px] h-[300px] rounded-[50%] overflow-hidden  absolute bg-[url('/images/ME2_converted.webp')] bg-cover bg-center bg-myBlack "
+            className="image md:w-[400px] w-[250px] md:h-[400px] h-[250px] rounded-[50%] overflow-hidden  absolute bg-[url('/images/ME2_converted.webp')] bg-cover bg-center bg-myBlack "
             style={{
               boxShadow:
                 "inset 0 0 60px 10px #1d1c22 , inset 0 0 40px 20px #1d1c22 , inset 0 0 50px 30px #1d1c22",
             }}
           ></div>
-
           <motion.svg
-            className="md:w-[400px] w-[300px] md:h-[400px] h-[300px] z-30"
+            className="md:w-[400px] w-[250px] md:h-[400px] h-[250px] z-30"
             fill="transparent"
             viewBox="0 0 506 506"
             xmlns="http://www.w3.org/2000/svg"
@@ -176,7 +169,7 @@ export default function Home() {
           </motion.svg>
         </motion.div>
       </div>
-      <div className="desc-holder grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 p-10 col-span-2  order-3 my-10">
+      <div className="desc-holder grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 p-10 col-span-2  order-3 my-10 md:pb-10 pb-20">
         <div
           className="flex flex-col justify-center items-center text-white sm:text-2xl text-xl font-bold shadow-my min-h-36 py-10 opacity-0 translate-y-3 anim-view "
           style={{ animationDelay: "1.4s" }}
@@ -188,23 +181,21 @@ export default function Home() {
           className="flex flex-col justify-center items-center text-white sm:text-2xl text-xl font-bold shadow-my min-h-36 py-10 opacity-0 translate-y-3 anim-view "
           style={{ animationDelay: "1.3s" }}
         >
-          {data.length > 0 && !loading  && Error === '' ? (
+          {data.length > 0 && !loading && Error === "" ? (
             <>
               <span className="text-myGreen sm:text-5xl text-3xl my-2">
                 {data[0].public_repos}
               </span>
               Repositories
             </>
-          ) : (
-            Error === '' ?(
-              <div className=" relative">
-              <MyLoader/>
+          ) : Error === "" ? (
+            <div className=" relative">
+              <MyLoader />
             </div>
-            )
-            :
-            (
-              <div className="error text-red-500 text-[20px] font-mono text-center p-2">{Error}</div>
-            )
+          ) : (
+            <div className="error text-red-500 text-[20px] font-mono text-center p-2">
+              {Error}
+            </div>
           )}
         </div>
         <div
@@ -215,23 +206,24 @@ export default function Home() {
           Technologies
         </div>
         <div
-          className="flex flex-col justify-center items-center text-white sm:text-2xl text-xl font-bold shadow-my min-h-36 py-10 opacity-0 translate-y-3 anim-view "
+          className="flex flex-col justify-center items-center text-white sm:text-2xl text-xl font-bold shadow-my min-h-36 py-10 opacity-0 translate-y-3 anim-view"
           style={{ animationDelay: "1.1s" }}
         >
-          {data.length > 0 && !loading && Error === ''? (
+          {data.length > 0 && !loading && Error === "" ? (
             <>
               <span className="text-myGreen sm:text-5xl text-3xl my-2">
                 {data[1]}
               </span>
               Code commits
             </>
-          ) : (
-            Error === '' ?
+          ) : Error === "" ? (
             <div className=" relative">
-              <MyLoader/>
+              <MyLoader />
             </div>
-            :
-            <div className="error text-red-500 text-[20px] font-mono text-center  p-2">{Error}</div>
+          ) : (
+            <div className="error text-red-500 text-[20px] font-mono text-center  p-2">
+              {Error}
+            </div>
           )}
         </div>
       </div>
