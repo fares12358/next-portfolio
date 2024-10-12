@@ -168,15 +168,19 @@
   animation-delay: -0.1s;
 }
 @keyframes scrollLeft{
-  from{
-    left: 100%;
-  }
   to{
-    left: calc(80px * -1);
+    transform:translate(calc(-50%  - 0.5rem))
   }
+}
+.animationReverce{
+  animation:   scrollLeft 20s linear infinite reverse ;
 }
 .scrollAnim{
   animation: scrollLeft 20s linear infinite;
+}
+.scroller{
+  -webkit-mask: linear-gradient(90deg,transparent,white 20% ,white 80%,transparent);
+  mask: linear-gradient(90deg,transparent,white 20% ,white 80%,transparent);
 }
 @layer utilities {
   .text-balance {

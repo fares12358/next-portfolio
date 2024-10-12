@@ -42,6 +42,19 @@ export default function Home() {
     };
     fetchData();
   }, []);
+
+  const whatsApp = (e) => {
+    e.preventDefault();
+    const phoneNumber = "201124711424"; // Replace with the phone number
+    const message = "Hello, I am texting you from your portfolio website!";
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    // Open WhatsApp chat in a new tab
+    window.open(whatsappURL, "_blank");
+  };
   return (
     <section className=" w-full h-[calc(100%-80px)] bg-transparent grid grid-cols-2 md:px-10 px-0 py-5">
       <BgAnim />
@@ -65,9 +78,12 @@ export default function Home() {
         >
           I'am a
           <span className="text-myGreen text-2xl"> front-end developer.</span>
-          <br /> , and I created this website to introduce myself and showcase my
-          skills in
-          <span className="text-myGreen text-2xl"> front-end development skills. </span>
+          <br /> , and I created this website to introduce myself and showcase
+          my skills in
+          <span className="text-myGreen text-2xl">
+            {" "}
+            front-end development skills.{" "}
+          </span>
           Welcome!
         </p>
         <div
@@ -100,7 +116,9 @@ export default function Home() {
               className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
               style={{ animationDelay: "1.5s" }}
             >
-              <FontAwesomeIcon icon={faSquareWhatsapp} />
+              <a target="_blank" aria-label="linkedin" onClick={whatsApp}>
+                <FontAwesomeIcon icon={faSquareWhatsapp} />
+              </a>
             </li>
             <li
               className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "

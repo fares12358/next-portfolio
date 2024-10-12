@@ -5,6 +5,7 @@ import Experience from "../components/Experience";
 import Education from "../components/Education";
 import Skills from "../components/Skills";
 import About from "../components/About";
+import LineSkills from "../components/LineSkills";
 const page = () => {
   const [component, setComponent] = useState(<Experience indexD={0} />);
   const [mark, setMark] = useState(1);
