@@ -23,36 +23,37 @@ const About = () => {
         efficient code. I am dedicated to producing visually appealing and
         responsive websites that provide an excellent user experience.
       </p>
-      <div className=" w-full my-10 rounded-md flex flex-col justify-center items-start p-4 md:text-2xl text-[15px]  text-start">
-        <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.2s" }}>
-          Name : <span className="text-white px-0 md:px-5 ">Fares Mohamed</span>
+      <div className=" w-full my-10 rounded-md grid grid-cols-1 lg:grid-cols-2 gap-5 justify-center items-start p-4 md:text-2xl text-[15px] text-start">
+        <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative flex gap-2 flex-col md:flex-row text-center md:text-start"
+          style={{ animationDelay: "0.2s" }}>
+          <span className="text-myGreen bg-[#2d2c35] px-4 py-2 rounded-lg">Name :</span>
+          <span className="text-white  text-xl bg-[#2d2c35] px-4 py-2 rounded-lg">Fares Mohamed</span>
         </h1>
-        <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.3s" }}>
-          Phone : <span className="text-white px-0 md:px-5 ">01124711424</span>
+        <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative flex gap-2 flex-col md:flex-row text-center md:text-start"
+          style={{ animationDelay: "0.2s" }}>
+          <span className="text-myGreen bg-[#2d2c35] px-4 py-2 rounded-lg">Phone :</span>
+          <span className="text-white  text-xl bg-[#2d2c35] px-4 py-2 rounded-lg">01124711424</span>
         </h1>
-        <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.4s" }}>
-          Experience :{" "}
-          <span className="text-white px-0 md:px-5 "> 2+ Years</span>
+        <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative flex gap-2 flex-col md:flex-row text-center md:text-start"
+          style={{ animationDelay: "0.4s" }}>
+          <span className="text-myGreen bg-[#2d2c35] px-4 py-2 rounded-lg">Experience :</span>
+          <span className="text-white  text-xl bg-[#2d2c35] px-4 py-2 rounded-lg"> 2+ Years</span>
         </h1>
-        <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.5s" }}>
-          Nationality :
-          <span className="text-white px-0 md:px-5 "> Egyptian</span>
+        <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative flex gap-2 flex-col md:flex-row text-center md:text-start"
+          style={{ animationDelay: "0.5s" }}>
+          <span className="text-myGreen bg-[#2d2c35] px-4 py-2 rounded-lg">Nationality :</span>
+          <span className="text-white  text-xl bg-[#2d2c35] px-4 py-2 rounded-lg">Egyptian</span>
         </h1>
-        <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.6s" }}>
-          Email :
-          <span className="text-white px-0 md:px-5 "> fm883254@gmail.com</span>
+        <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative flex gap-2 flex-col md:flex-row text-center md:text-start"
+          style={{ animationDelay: "0.6s" }}>
+           <span className="text-myGreen bg-[#2d2c35] px-4 py-2 rounded-lg">Email :</span>
+          <span className="text-white  text-xl bg-[#2d2c35] px-4 py-2 rounded-lg"> fm883254@gmail.com</span>
         </h1>
-        <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.7s" }}>
-          Language :
-          <span className="text-white px-0 md:px-5  opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.8s" }}>
-            B1 English / A1 German
+        <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative flex gap-2 flex-col md:flex-row text-center md:text-start"
+          style={{ animationDelay: "0.7s" }}>
+           <span className="text-myGreen bg-[#2d2c35] px-4 py-2 rounded-lg ">Language :</span>
+          <span className="text-white text-lg  bg-[#2d2c35] px-4 py-2 rounded-lg">
+            B1-English/A1-German
           </span>
         </h1>
       </div>

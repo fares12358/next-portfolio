@@ -22,7 +22,7 @@ const Education = () => {
         style={{ animationDelay: "0.3s" }}>
           <span className="text-myGreen my-4 font-bold">2022-2024</span>
           <p>
-          Study the front-end and learn the programming languages html, css, and js
+          Study the front-end and learn the programming languages html, css, js <span className="text-myGreen">....etc </span>
           </p>
         </div>
       </div>

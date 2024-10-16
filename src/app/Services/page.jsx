@@ -7,9 +7,9 @@ const page = () => {
       <div className="shadow-my text-white p-10 opacity-0 translate-y-3 anim-view "
         style={{ animationDelay: "0.6s" }}>
         <p className="text-myGreen text-5xl  font-bold ">1</p>
-        <h1 className="md:text-3xl text-2xl font-bold my-5">Web Development</h1>
+        <h1 className="md:text-3xl text-2xl font-bold my-5">Front End Development</h1>
         <p className="text-base font-medium text-neutral-500">
-          Providing web development services using the latest technologies to
+          Providing Front End development services using the latest technologies to
           ensure fast, secure, and responsive websites. Whether you need a
           business site, personal blog, or e-commerce platform, we're here to
           turn your vision into reality.
@@ -29,11 +29,9 @@ const page = () => {
       <div className="shadow-my text-white p-10 opacity-0 translate-y-3 anim-view "
         style={{ animationDelay: "0.8s" }}>
         <p className="text-myGreen text-5xl font-bold">3</p>
-        <h1 className="md:text-3xl text-2xl font-bold my-5">SEO<span className="text-myGreen text-sm md:text-xl ml-3"> working on it . . .</span></h1>
+        <h1 className="md:text-3xl text-2xl font-bold my-5">Back End Development<span className="text-myGreen text-sm md:text-xl ml-3"> working on it . . .</span></h1>
         <p className="text-base font-medium text-neutral-500">
-          Optimizing your sites to appear in the top search results on search
-          engines. We use advanced strategies to ensure increased visitors,
-          improved online visibility, and higher engagement with your content.
+          We provide reliable backend development services using the latest technologies to build strong, scalable, and efficient systems. From API integrations and database management to custom server solutions, we focus on delivering secure, high-performance backends for your project. Let us help you bring your ideas to life with backend solutions designed to meet your specific needs.
         </p>
       </div>
       <div className="shadow-my text-white p-10 opacity-0 translate-y-3 anim-view"

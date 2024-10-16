@@ -36,7 +36,7 @@ const Skills = () => {
         in working with <span className="text-myGreen"> JSON </span> for data
         interchange and <span className="text-myGreen"> AJAX </span> for
         asynchronous data retrieval. Also familiar with unit testing using
-        <span className="text-myGreen"> Jest </span>.
+        <span className="text-myGreen"> JEST </span>.
       </p>
       <div className="col-span-3 self-center  flex items-center justify-center opacity-0 anim-view" style={{ animationDelay: "0.2s" }}>
         <LineSkills isIcon={false} direction={true} data={skillsItems} />

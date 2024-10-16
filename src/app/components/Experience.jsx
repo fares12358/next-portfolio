@@ -7,14 +7,15 @@ const Experience = (props) => {
         style={{ animationDelay: `${timingDelay[props.indexD][0]}` }}>Experience</h1>
       <p className="text-neutral-500 font-semibold md:text-lg text-sm opacity-0 translate-y-3 anim-view relative"
         style={{ animationDelay: `${timingDelay[props.indexD][1]}` }}>
-        I started learning front-end development in 2021 and have been
+        I started learning front-end development in 2022 and have been
         continuously practicing and improving my coding skills. I am dedicated
         to enhancing my abilities in coding and organizing my work to produce
         high-quality
       </p>
-      <div className="bg-[#28272c] md:w-[300px] w-[200px]  h-[100px] my-10 rounded-md flex items-start  justify-center p-4 opacity-0 translate-y-3 anim-view relative"
+      <div className="bg-[#28272c] md:w-[300px] w-[200px]  h-[100px] my-10 rounded-md flex flex-col items-center gap-2 justify-center p-4 opacity-0 translate-y-3 anim-view relative"
         style={{ animationDelay: `${timingDelay[props.indexD][2]}` }}>
-        <span className="text-myGreen ">2021-2024</span>
+        <span className="text-myGreen font-bold">2021-2024</span>
+        <span className="text-myGreen md:text-xl font-bold">Front End Developer</span>
       </div>
     </div>
   );
