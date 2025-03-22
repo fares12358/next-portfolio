@@ -9,19 +9,19 @@ const Education = () => {
         I am currently a second-year student at New Cairo Technology College,
         specializing in Information Technology (IT) as a software developer
       </p>
-      <div className=" w-full my-10 rounded-md grid md:grid-cols-2 grid-cols-1 gap-5 p-4">
-        <div className="bg-[#28272c] p-5 rounded-lg flex flex-col opacity-0 translate-y-3 anim-view relative"
+      <div className=" text-myGreen font-bold w-full my-10 flex flex-col justify-start items-start gap-5">
+        <div className="opacity-0 translate-y-3 anim-view relative"
         style={{ animationDelay: "0.2s" }}>
-          <span className="text-myGreen my-4 font-bold">2021-2022</span>
           <p>
+            2021-2022 /
             Study the basic principles of programming languages using Python, C,
             and C++
           </p>
         </div>
-        <div className="bg-[#28272c] p-5 rounded-lg flex flex-col opacity-0 translate-y-3 anim-view relative"
+        <div className="text-myGreen font-bold flex flex-col opacity-0 translate-y-3 anim-view relative"
         style={{ animationDelay: "0.3s" }}>
-          <span className="text-myGreen my-4 font-bold">2022-2024</span>
           <p>
+          2022-2024 / 
           Study the front-end and learn the programming languages html, css, js <span className="text-myGreen">....etc </span>
           </p>
         </div>

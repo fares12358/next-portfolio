@@ -45,14 +45,11 @@ export default function Home() {
 
   const whatsApp = (e) => {
     e.preventDefault();
-    const phoneNumber = "201124711424"; // Replace with the phone number
-    const message = "Hello, I am texting you from your portfolio website!";
+    const phoneNumber = "201124711424";
+    const message = encodeURIComponent("Hello, I am texting you from your portfolio website!");
 
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
-    )}`;
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
-    // Open WhatsApp chat in a new tab
     window.open(whatsappURL, "_blank");
   };
   return (
@@ -79,26 +76,23 @@ export default function Home() {
           I'am a
           <span className="text-myGreen text-2xl"> front-end developer.</span>
           <br /> , and I created this website to introduce myself and showcase
-          my skills in
-          <span className="text-myGreen text-2xl">
-            {" "}
-            front-end development skills.{" "}
-          </span>
-          Welcome!
+          my skills in 
+          <span className="text-myGreen text-2xl"> front-end development skills.</span> Welcome!
         </p>
         <div
-          className=" flex justify-around items-center flex-col md:flex-row  opacity-0 translate-y-3 anim-view "
+          className=" flex justify-start gap-5 items-center flex-col md:flex-row  opacity-0 translate-y-3 anim-view "
           style={{ animationDelay: "0.8s" }}
         >
           <button
-            className="sm:text-lg text-base sm:w-[240px] w-[200px] h-[50px] md:mb-0 mb-10 xl:mb-0 text-myGreen border-2 border-myGreen px-5 py-2 rounded-3xl flex justify-around items-center"
+            className="sm:text-lg text-base sm:w-[240px] w-[200px] h-[50px] md:mb-0 mb-10 xl:mb-0 text-myGreen border border-myGreen px-5 py-2 rounded-md flex justify-around items-center"
             onClick={getCv}
           >
-            <p>DownloadCV </p>
+            <p>Download CV </p>
             <span className="h-[100%] w-[50px] flex items-center justify-center">
               <FontAwesomeIcon className="w-[50%]" icon={faDownload} />
             </span>
           </button>
+          
           <ul className="px-10 flex items-center text-myGreen">
             <li
               className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
@@ -148,19 +142,19 @@ export default function Home() {
         </div>
       </div>
       <div
-        className="img-holder xl:col-span-1 col-span-2  flex items-center justify-center order-1 xl:order-2  py-10 opacity-0 translate-y-3 anim-view relative"
+        className="img-holder xl:col-span-1 col-span-2  flex items-center justify-center order-1 xl:order-2  md:py-10 opacity-0 translate-y-3 anim-view relative"
         style={{ animationDelay: "0.8s" }}
       >
         <motion.div className="flex justify-center items-center">
           <div
-            className="image md:w-[400px] w-[250px] md:h-[400px] h-[250px] rounded-[50%] overflow-hidden  absolute bg-[url('/images/ME2_converted.webp')] bg-cover bg-center bg-myBlack "
+            className="image md:w-[400px] w-[300px] md:h-[400px] h-[300px] rounded-[50%] overflow-hidden  absolute bg-[url('/images/ME2_converted.webp')] bg-cover bg-center bg-myBlack "
             style={{
               boxShadow:
                 "inset 0 0 60px 10px #1d1c22 , inset 0 0 40px 20px #1d1c22 , inset 0 0 50px 30px #1d1c22",
             }}
           ></div>
           <motion.svg
-            className="md:w-[400px] w-[250px] md:h-[400px] h-[250px] z-30"
+            className="md:w-[400px] w-[300px] md:h-[400px] h-[300px] z-30"
             fill="transparent"
             viewBox="0 0 506 506"
             xmlns="http://www.w3.org/2000/svg"
@@ -192,7 +186,7 @@ export default function Home() {
           className="flex flex-col justify-center items-center text-white sm:text-2xl text-xl font-bold shadow-my min-h-36 py-10 opacity-0 translate-y-3 anim-view "
           style={{ animationDelay: "1.4s" }}
         >
-          <span className="text-myGreen sm:text-5xl text-3xl my-2">2</span>years
+          <span className="text-myGreen sm:text-5xl text-3xl my-2">3+</span>years
           of experience
         </div>
         <div
@@ -211,7 +205,7 @@ export default function Home() {
               <MyLoader />
             </div>
           ) : (
-            <div className="error text-red-500 text-[20px] font-mono text-center p-2">
+            <div className="error text-red-500 text-[16px] font-mono text-center p-2">
               {Error}
             </div>
           )}
@@ -239,7 +233,7 @@ export default function Home() {
               <MyLoader />
             </div>
           ) : (
-            <div className="error text-red-500 text-[20px] font-mono text-center  p-2">
+            <div className="error text-red-500 text-[16px] font-mono text-center  p-2">
               {Error}
             </div>
           )}

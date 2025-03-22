@@ -9,7 +9,7 @@ const page = () => {
   const [component, setComponent] = useState(<Experience indexD={0} />);
   const [mark, setMark] = useState(1);
   const getComponent = (e) => {
-    event.preventDefault();
+    event.preventDefault();   
     if (e === 1) {
       setComponent(<Experience indexD={1} />);
       setMark(1);
@@ -25,7 +25,7 @@ const page = () => {
     }
   };
   return (
-    <section className=" w-full h-[calc(100%-80px)] bg-transparent grid xl:grid-cols-3 grid-cols-1 md:p-20 py-20 px-0 ">
+    <section className=" w-full h-[calc(100%-80px)] bg-transparent grid xl:grid-cols-3 grid-cols-1 md:p-20 py-20 px-0 overflow-auto main">
       <BgAnim />
       <div className="flex flex-col items-center justify-around h-[350px] text-white font-bold mb-10">
         <div

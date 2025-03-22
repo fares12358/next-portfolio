@@ -15,7 +15,7 @@ export default function nav() {
     { name: "Home", href: "/", current: true },
     { name: "Services", href: "/Services", current: false },
     { name: "Resume", href: "/Resume", current: false },
-    { name: "Work", href: "/Work", current: false },
+    { name: "Projects", href: "/Work", current: false },
   ]);
   const handleClick = (clickedItem) => {
     const updatedNavigation = navigation.map((item) => ({
@@ -35,18 +35,19 @@ export default function nav() {
               <span className="sr-only">Open main menu</span>
               <Bars3Icon
                 aria-hidden="true"
-                className="block h-8 w-8 group-data-[open]:hidden "
+                className="block h-6 w-6 group-data-[open]:hidden "
               />
               <XMarkIcon
                 aria-hidden="true"
-                className="hidden h-8 w-8 group-data-[open]:block border-2 border-myGreen"
+                className="hidden h-6 w-6 group-data-[open]:block border-2 border-myGreen"
               />
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-start sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center sm:">
               <h1 className="uppercase text-white font-bold md:text-2xl text-base">
-                portfolio <span className="text-myGreen">.</span>
+                <span className="text-myGreen">fares.</span>
+                portfolio
               </h1>
             </div>
             <div className="hidden  sm:block ml-auto mr-0">
@@ -61,7 +62,7 @@ export default function nav() {
                       item.current
                         ? " text-myGreen font-bold underline underline-offset-8"
                         : "hover:text-myGreen text-white",
-                      "block rounded-md px-3 py-2 text-2xl font-bold "
+                      "block rounded-md px-3 py-2 text-md lg:text-2xl font-bold "
                     )}
                   >
                     {item.name}
@@ -72,14 +73,14 @@ export default function nav() {
           </div>
         </div>
       </div>
-      <DisclosurePanel className="sm:hidden  absolute w-full bg-myBlack pl-6">
-        <div className="space-y-1 px-2 pb-3 pt-2">
+      <DisclosurePanel className="sm:hidden  absolute w-full bg-myBlack pl-6 group-data-[open]:hidden">
+        <div className="space-y-1 px-2 pb-3 pt-2  border-b border-myGreen">
           {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               aria-current={item.current ? "page" : undefined}
-              onClick={() => handleClick(item)}
+              onClick={() => handleClick(item) }
               className={classNames(
                 item.current ? " text-myGreen" : " text-white ",
                 "block rounded-md px-3 py-2 text-md font-bold"

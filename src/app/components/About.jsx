@@ -8,13 +8,13 @@ const About = () => {
         style={{ animationDelay: "0.1s" }}>
 
         I am Fares, a passionate front-end developer with a strong foundation in
-        HTML, CSS, JavaScript, and Bootstrap. Currently, I am a second-year
-        student at New Cairo Technology College, specializing in Information
+        HTML, CSS, JavaScript, and Bootstrap. Currently, I am a third-year
+        student at New Cairo Technology university, specializing in Information
         Technology (IT) as a software developer. My journey in front-end
-        development began in 2021, and since then, I have been committed to
+        development began in 2022, and since then, I have been committed to
         honing my skills and expanding my knowledge in web development. I have a
         keen interest in creating interactive and user-friendly web
-        applications. My skills include working withReact to build modern web
+        applications. My skills include working with React to build modern web
         applications, utilizing Git for version control, and employing Tailwind
         CSS for rapid design development. I am also familiar with using GitHub
         for code collaboration and jQuery for simplifying JavaScript
@@ -32,12 +32,12 @@ const About = () => {
         <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative flex gap-2 flex-col md:flex-row text-center md:text-start"
           style={{ animationDelay: "0.2s" }}>
           <span className="text-myGreen bg-[#2d2c35] px-4 py-2 rounded-lg">Phone :</span>
-          <span className="text-white  text-xl bg-[#2d2c35] px-4 py-2 rounded-lg">01124711424</span>
+          <span className="text-white  text-xl bg-[#2d2c35] px-4 py-2 rounded-lg">+20 1124711424</span>
         </h1>
         <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative flex gap-2 flex-col md:flex-row text-center md:text-start"
           style={{ animationDelay: "0.4s" }}>
           <span className="text-myGreen bg-[#2d2c35] px-4 py-2 rounded-lg">Experience :</span>
-          <span className="text-white  text-xl bg-[#2d2c35] px-4 py-2 rounded-lg"> 2+ Years</span>
+          <span className="text-white  text-xl bg-[#2d2c35] px-4 py-2 rounded-lg"> 3+ Years</span>
         </h1>
         <h1 className="text-myGreen my-1 opacity-0 translate-y-3 anim-view relative flex gap-2 flex-col md:flex-row text-center md:text-start"
           style={{ animationDelay: "0.5s" }}>
@@ -53,7 +53,7 @@ const About = () => {
           style={{ animationDelay: "0.7s" }}>
            <span className="text-myGreen bg-[#2d2c35] px-4 py-2 rounded-lg ">Language :</span>
           <span className="text-white text-lg  bg-[#2d2c35] px-4 py-2 rounded-lg">
-            B1-English/A1-German
+            B1-English
           </span>
         </h1>
       </div>

@@ -11,18 +11,15 @@ const LineSkills = (props) => {
   return (
     <div
       data_animated={data_animated}
-      className={`scroller w-[300px] sm:w-[600px] md:w-[800px] ${
-        data_animated ? `overflow-hidden ` : ``
-      }`}
+      className={` holder scroller w-[300px] sm:w-[600px] md:w-[800px] ${data_animated ? `overflow-hidden ` : ``
+        }`}
     >
       <div
-        className={`flex gap-4 py-3 w-max ${
-          data_animated
-            ? `flex-nowrap  ${
-                direction_animated ? `animationReverce` : `scrollAnim`
-              }`
+        className={`flex gap-4 py-3 w-max ${data_animated
+            ? `flex-nowrap  ${direction_animated ? `animationReverce` : `scrollAnim`
+            }`
             : `flex-wrap`
-        }`}
+          }  hover-pause-anime`}
       >
         {data.map((item, index) => (
           <div
@@ -30,11 +27,13 @@ const LineSkills = (props) => {
             className="bg-[#2d2c35] w-fit h-fit shadow-md py-4 px-5 text-myGreen uppercase rounded-md"
           >
             {isIcon ? (
-              <div className="relative w-[50px] h-[50px]">
+              <div className="relative w-[20px] h-[20px] md:w-[50px] md:h-[50px]">
                 <Image src={item} alt="icon" layout="fill" objectFit="contain" />
               </div>
             ) : (
-              item
+              <p className="text-xs md:text-lg">
+                {item}
+              </p>
             )}
           </div>
         ))}
@@ -46,7 +45,7 @@ const LineSkills = (props) => {
             className="bg-[#2d2c35] w-fit h-fit shadow-md py-4 px-5 text-myGreen uppercase rounded-md"
           >
             {isIcon ? (
-              <div className="relative w-[50px] h-[50px]">
+              <div className="relative w-[20px] h-[20px] md:w-[50px] md:h-[50px]">
                 <Image src={item} alt="icon" layout="fill" objectFit="contain" />
               </div>
             ) : (
