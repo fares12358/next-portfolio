@@ -40,7 +40,7 @@ export const list = [
   [
     "Dental booking website",
     "A simple design dentelcare booking website with admin Dashboard",
-    "Html 5 , Css 3 , Javascript , react and Tailwind",
+    "Javascript , react and Tailwind",
     "https://github.com/fares12358/BookingDentist",
     "https://booking-dentist.vercel.app/",
     "/images/dentist.webp"
@@ -48,10 +48,34 @@ export const list = [
   [
     "Travel App",
     "A simple design for responsive travel web site",
-    "Html 5, Css 3, typescript , tailwind , next ,react",
+    "typescript , tailwind , next",
     "https://github.com/fares12358/Travel-app",
     "https://travel-app-red-seven.vercel.app/",
     "/images/travel-app.webp"
+  ],
+  [
+    "eleanor",
+    "A simple clothing design website for a graduation project was sold to students in Saudi Arabia for $200.",
+    "MERN Stack, javascript, nextjs , tailwind , nodejs, ,Express,mongodb,firebase",
+    "https://github.com/fares12358/eleanor-website",
+    "https://eleanor-website.vercel.app/",
+    "/images/eleanor.png"
+  ],
+  [
+    "Mobile back cover",
+    "A simple e-commerce design for mobile cover",
+    "Javascript , react and bootstrap",
+    "https://github.com/fares12358/online-shop-with-react",
+    "https://fares12358.github.io/online-shop-with-react/",
+    "/images/backApp.webp"
+  ],
+  [
+    "Car store",
+    "A simple e-commerce design for Cars",
+    "nextjs, typescript , Api , Tailwind",
+    "https://github.com/fares12358/car-store",
+    "https://car-store-eta.vercel.app/",
+    "/images/car-store.webp"
   ],
   [
     "Bondi landing page",
@@ -62,14 +86,6 @@ export const list = [
     "/images/Untitled (1).webp"
   ],
   [
-    "Mobile back cover",
-    "A simple e-commerce design for mobile cover",
-    "Html 5, Css 3, Javascript , react and bootstrap",
-    "https://github.com/fares12358/online-shop-with-react",
-    "https://fares12358.github.io/online-shop-with-react/",
-    "/images/backApp.webp"
-  ],
-  [
     "island landing page",
     "A landing pag for travel island web site",
     "Html 5, Css 3, Javascript and bootstrap",
@@ -77,12 +93,5 @@ export const list = [
     "https://fares12358.github.io/island/",
     "/images/island.webp"
   ],
-  [
-    "404 Page",
-    "A 404 Error not found page design",
-    "Html 5, Css 3, Javascript and bootstrap",
-    "https://github.com/fares12358/Xcompany",
-    "https://fares12358.github.io/Xcompany/",
-    "/images/Untitled.webp"
-  ],
+  
 ];

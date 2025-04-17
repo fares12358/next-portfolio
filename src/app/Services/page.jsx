@@ -25,7 +25,7 @@ const page = () => {
         <p className="text-myGreen text-5xl font-bold">3</p>
         <h1 className="md:text-3xl text-2xl font-bold my-5">Back End Development</h1>
         <p className="text-base font-medium text-neutral-500">
-        Enhancing back-end skills to ensure efficient database management and robust website security using the Node.js framework
+        Enhancing back-end skills to ensure efficient database management and robust website security using the Node.js , Express , mongodb
         </p>
       </div>
       <div className="shadow-my text-white p-10 opacity-0 translate-y-3 anim-view"

@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { getDataFromGithub } from "@/utils/APIGithub";
 import MyLoader from "./components/MyLoader";
+import Link from "next/link";
 export default function Home() {
   const getCv = (e) => {
     event.preventDefault();

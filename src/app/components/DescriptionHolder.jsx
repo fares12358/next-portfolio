@@ -2,7 +2,7 @@ import React from 'react'
 import Image from "next/image";
 const DescriptionHolder = ({name,desc,tch,gitLink,pageLink}) => {
     return (
-        <div className="order-2 lg:order-1 text-center lg:text-start px-3">
+        <div className="order-2 lg:order-1 text-center lg:text-start px-3 flex-1">
 
             <h1
                 className="text-2xl md:text-3xl font-bold text-white opacity-0 translate-y-3 anim-view relative"
@@ -11,7 +11,7 @@ const DescriptionHolder = ({name,desc,tch,gitLink,pageLink}) => {
                 {name}
             </h1>
             <p
-                className="text-lg md:text-xl py-4 text-neutral-500 opacity-0 translate-y-3 anim-view relative"
+                className="text-lg md:text-xl py-4 text-neutral-500 opacity-0 translate-y-3 anim-view relative flex flex-wrap"
                 style={{ animationDelay: "0.8s" }}
             >
                 {desc}
