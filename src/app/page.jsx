@@ -61,17 +61,20 @@ export default function Home() {
     axios.post(`${API}/track-visitor`, { url })
       .then(() => console.log('Visitor Tracked'))
       .catch(err => console.error('Tracking failed:', err));
+    getVistors();
   }, []);
-
-  useEffect(() => {
+  
+  const getVistors = () => {
     axios.get(`${API}/visitor-count`)
       .then(res => {
-        console.log("Total visitors:", res.data.total);
         setvistors(res.data.total);
       })
       .catch(err => {
         console.error("Failed to fetch visitor count:", err);
       });
+  }
+  useEffect(() => {
+    getVistors();
   }, []);
   return (
     <section className=" w-full h-[calc(100%-80px)] bg-transparent grid grid-cols-2 md:px-10 px-0 py-5">
