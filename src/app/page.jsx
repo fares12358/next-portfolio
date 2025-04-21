@@ -12,10 +12,15 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { getDataFromGithub } from "@/utils/APIGithub";
 import MyLoader from "./components/MyLoader";
-import Link from "next/link";
+import axios from 'axios';
 export default function Home() {
+  const API = 'https://node-portfolio-back-end-eight.vercel.app';
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [Error, setError] = useState("");
+  const [vistors, setvistors] = useState(null);
   const getCv = (e) => {
-    event.preventDefault();
+    e.preventDefault();
     let fileUrl = "/pdf/cv.pdf";
     // Create a temporary anchor element
     let link = document.createElement("a");
@@ -25,9 +30,6 @@ export default function Home() {
     link.click();
     document.body.removeChild(link);
   };
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [Error, setError] = useState("");
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -53,8 +55,27 @@ export default function Home() {
 
     window.open(whatsappURL, "_blank");
   };
+
+  useEffect(() => {
+    const url = window.location.href;
+    axios.post(`${API}/track-visitor`, { url })
+      .then(() => console.log('Visitor Tracked'))
+      .catch(err => console.error('Tracking failed:', err));
+  }, []);
+
+  useEffect(() => {
+    axios.get(`${API}/visitor-count`)
+      .then(res => {
+        console.log("Total visitors:", res.data.total);
+        setvistors(res.data.total);
+      })
+      .catch(err => {
+        console.error("Failed to fetch visitor count:", err);
+      });
+  }, []);
   return (
     <section className=" w-full h-[calc(100%-80px)] bg-transparent grid grid-cols-2 md:px-10 px-0 py-5">
+      <span className="absolute bottom-5 right-5 flex items-center justify-center gap-1 text-white font-bold">{vistors}<img src="/svg/eye-vistor-com.svg" alt="vistor" className="w-[20px] h-[20px]" /></span>
       <BgAnim />
       <div className="text-holder col-span-2 xl:col-span-1 pt-10 px-10 font-bold text-white text-3xl order-2 xl:order-1 ">
         <p
@@ -77,7 +98,7 @@ export default function Home() {
           I'am a
           <span className="text-myGreen text-2xl"> front-end developer.</span>
           <br /> , and I created this website to introduce myself and showcase
-          my skills in 
+          my skills in
           <span className="text-myGreen text-2xl"> front-end development skills.</span> Welcome!
         </p>
         <div
@@ -93,7 +114,7 @@ export default function Home() {
               <FontAwesomeIcon className="w-[50%]" icon={faDownload} />
             </span>
           </button>
-          
+
           <ul className="px-10 flex items-center text-myGreen">
             <li
               className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
