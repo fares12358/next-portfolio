@@ -102,22 +102,36 @@ export default function Home() {
           <span className="text-myGreen text-2xl"> front-end development skills.</span> Welcome!
         </p>
         <div
-          className=" flex justify-start gap-5 items-center flex-col md:flex-row  opacity-0 translate-y-3 anim-view "
-          style={{ animationDelay: "0.8s" }}
+          className=" flex justify-start gap-5 items-center flex-col md:flex-row"
         >
-          <button
-            className="sm:text-lg text-base sm:w-[240px] w-[200px] h-[50px] md:mb-0 mb-10 xl:mb-0 text-myGreen border border-myGreen px-5 py-2 rounded-md flex justify-around items-center"
-            onClick={getCv}
-          >
-            <p>Download CV </p>
-            <span className="h-[100%] w-[50px] flex items-center justify-center">
-              <FontAwesomeIcon className="w-[50%]" icon={faDownload} />
-            </span>
-          </button>
+          <div className="flex items-center justify-center gap-5">
 
+            <p className="text-[20px] uppercase opacity-0 translate-y-3 anim-view"
+              style={{ animationDelay: "1.4s" }}
+            
+            >Get CV </p>
+            <button
+              className="p-3 text-myGreen shadow-2xl shadow-black rounded-md flex justify-around items-center w-[50px]  opacity-0 translate-y-3 anim-view"
+              onClick={getCv}
+              style={{ animationDelay: "1.5s" }}
+
+            >
+                <FontAwesomeIcon className="w-[70%]" icon={faDownload} />
+            </button>
+            <a
+              className="p-3 text-myGreen shadow-2xl shadow-black rounded-md flex justify-around items-center w-[50px]  opacity-0 translate-y-3 anim-view"
+              href="/pdf/cv.pdf"
+              target="_blank"
+              style={{ animationDelay: "1.6s" }}
+
+            >
+              <img src="/svg/order-com.svg" alt="view" className="w-full h-fit" />
+            </a>
+
+          </div>
           <ul className="px-10 flex items-center text-myGreen">
             <li
-              className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
+              className=" shadow-2xl shadow-black  rounded-md h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
               style={{ animationDelay: "1.4s" }}
             >
               <a
@@ -129,7 +143,7 @@ export default function Home() {
               </a>
             </li>
             <li
-              className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
+              className=" shadow-2xl shadow-black  rounded-md h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
               style={{ animationDelay: "1.5s" }}
             >
               <a target="_blank" aria-label="linkedin" onClick={whatsApp}>
@@ -137,7 +151,7 @@ export default function Home() {
               </a>
             </li>
             <li
-              className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
+              className=" shadow-2xl shadow-black  rounded-md h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
               style={{ animationDelay: "1.6s" }}
             >
               <a
@@ -149,7 +163,7 @@ export default function Home() {
               </a>
             </li>
             <li
-              className=" rounded-[50%] h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
+              className=" shadow-2xl shadow-black  rounded-md h-[50px] w-[50px] mx-2 flex items-center justify-center p-2 cursor-pointer opacity-0 translate-y-3 anim-view "
               style={{ animationDelay: "1.7s" }}
             >
               <a
