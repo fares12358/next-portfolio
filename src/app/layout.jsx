@@ -1,5 +1,6 @@
 import './globals.css';
 import Nav from './components/Nav';
+import Script from 'next/script';
 
 export const metadata = {
   metadataBase: new URL('https://fares-portfolio.vercel.app'),
@@ -32,10 +33,35 @@ export const metadata = {
     icon: '/images/ME2_converted.webp',
   },
 };
+//G-JKC0JVH108
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr">
+      <head>
+        {/* Load GA library */}
+        {GA_ID && (
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            strategy="afterInteractive"
+          />
+        )}
+
+        {/* Initialize GA */}
+        {GA_ID && (
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}', {
+                page_path: window.location.pathname,
+              });
+            `}
+          </Script>
+        )}
+      </head>
       <body className="w-full bg-transparent overflow-hidden">
         <div className="main container mx-auto w-full h-full overflow-y-auto overflow-hidden">
           <Nav />
