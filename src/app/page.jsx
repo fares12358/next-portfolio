@@ -13,12 +13,15 @@ import { useEffect, useState } from "react";
 import { getDataFromGithub } from "@/utils/APIGithub";
 import MyLoader from "./components/MyLoader";
 import axios from 'axios';
+import Link from "next/link";
 export default function Home() {
   const API = 'https://node-portfolio-back-end-eight.vercel.app';
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [Error, setError] = useState("");
-  const [vistors, setvistors] = useState(null);
+  const [vistors, setVisitors] = useState(null);
+  const [V_loading, setV_Loading] = useState(false)
+
   const getCv = (e) => {
     e.preventDefault();
     let fileUrl = "/pdf/cv.pdf";
@@ -64,18 +67,36 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    axios.get(`${API}/visitor-count`)
-      .then(res => {
-        console.log("Total visitors:", res.data.total);
-        setvistors(res.data.total);
-      })
-      .catch(err => {
-        console.error("Failed to fetch visitor count:", err);
-      });
-  }, []);
+    const fetchVisitorCount = async () => {
+      try {
+        setV_Loading(true)
+        const res = await axios.get(`${API}/visitor-count`)
+        console.log("Total visitors:", res.data.total)
+        setVisitors(res.data.total)
+      } catch (err) {
+        console.error("Failed to fetch visitor count:", err)
+      } finally {
+        setV_Loading(false)
+      }
+    }
+
+    fetchVisitorCount()
+  }, [])
+
   return (
     <section className=" w-full h-[calc(100%-80px)] bg-transparent grid grid-cols-2 md:px-10 px-0 py-5">
-      <span className="absolute bottom-5 right-5 flex items-center justify-center gap-1 text-white font-bold">{vistors}<img src="/svg/eye-vistor-com.svg" alt="vistor" className="w-[20px] h-[20px]" /></span>
+      <Link href={'/Visitors'} className="absolute bottom-5 right-5 flex items-center justify-center gap-1 text-white font-bold">
+        {
+          V_loading ?
+            <div className="relative flex items-center justify-center">
+              <MyLoader />
+            </div>
+            :
+            <>
+              {vistors}<img src="/svg/eye-vistor-com.svg" alt="vistor" className="w-[20px] h-[20px]" />
+            </>
+        }
+      </Link>
       <BgAnim />
       <div className="text-holder col-span-2 xl:col-span-1 pt-10 px-10 font-bold text-white text-3xl order-2 xl:order-1 ">
         <p
@@ -108,7 +129,7 @@ export default function Home() {
 
             <p className="text-[20px] uppercase opacity-0 translate-y-3 anim-view"
               style={{ animationDelay: "1.4s" }}
-            
+
             >Get CV </p>
             <button
               className="p-3 text-myGreen shadow-2xl shadow-black rounded-md flex justify-around items-center w-[50px]  opacity-0 translate-y-3 anim-view"
@@ -116,7 +137,7 @@ export default function Home() {
               style={{ animationDelay: "1.5s" }}
 
             >
-                <FontAwesomeIcon className="w-[70%]" icon={faDownload} />
+              <FontAwesomeIcon className="w-[70%]" icon={faDownload} />
             </button>
             <a
               className="p-3 text-myGreen shadow-2xl shadow-black rounded-md flex justify-around items-center w-[50px]  opacity-0 translate-y-3 anim-view"
@@ -250,7 +271,7 @@ export default function Home() {
           className="flex flex-col justify-center items-center text-white sm:text-2xl text-xl font-bold shadow-my min-h-36 py-10 opacity-0 translate-y-3 anim-view "
           style={{ animationDelay: "1.2s" }}
         >
-          <span className="text-myGreen sm:text-5xl text-3xl my-2">14</span>
+          <span className="text-myGreen sm:text-5xl text-3xl my-2">18</span>
           Technologies
         </div>
         <div
