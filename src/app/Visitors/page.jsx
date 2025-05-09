@@ -7,8 +7,8 @@ const Page = () => {
     const [data, setData] = useState([]);
     const [loader, setLoader] = useState(false);
 
-    const API = 'http://localhost:5000';
-    // const API = 'https://node-portfolio-back-end-eight.vercel.app';
+    // const API = 'http://localhost:5000';
+    const API = 'https://node-portfolio-back-end-eight.vercel.app';
 
     const getVisitor = async () => {
         try {
