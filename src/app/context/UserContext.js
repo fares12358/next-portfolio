@@ -5,10 +5,11 @@ import { createContext, useContext, useState } from 'react';
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const [isAdminLoged, setIsAdminLoged] = useState(false);
+  const [user, setUser] = useState(null); // or any default
+  const [isAdminLoged, setIsAdminLoged] = useState(false); // or any default
 
   return (
-    <UserContext.Provider value={{ isAdminLoged, setIsAdminLoged}}>
+    <UserContext.Provider value={{ user, setUser ,isAdminLoged, setIsAdminLoged}}>
       {children}
     </UserContext.Provider>
   );
