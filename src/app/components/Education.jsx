@@ -6,7 +6,7 @@ const Education = () => {
         style={{ animationDelay: "0.0s" }}>Education</h1>
       <p className="text-neutral-500 font-semibold md:text-lg text-sm opacity-0 translate-y-3 anim-view relative"
         style={{ animationDelay: "0.1s" }}>
-        I am currently a second-year student at New Cairo Technology College,
+        I am currently a third-year student at New Cairo Technology College,
         specializing in Information Technology (IT) as a software developer
       </p>
       <div className=" text-myGreen font-bold w-full my-10 flex flex-col justify-start items-start gap-5">
