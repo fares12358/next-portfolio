@@ -1,7 +1,7 @@
 import './globals.css';
 import Nav from './components/Nav';
 import Script from 'next/script';
-
+import { UserProvider } from './context/UserContext';
 export const metadata = {
   metadataBase: new URL('https://fares-portfolio.vercel.app'),
   title: 'FARES.PORTFOLIO',
@@ -63,10 +63,12 @@ export default function RootLayout({ children }) {
         )}
       </head>
       <body className="w-full bg-transparent overflow-hidden">
-        <div className="main container mx-auto w-full h-full overflow-y-auto overflow-hidden">
-          <Nav />
-          {children}
-        </div>
+        <UserProvider>
+          <div className="main container mx-auto w-full h-full overflow-y-auto overflow-hidden">
+            <Nav />
+            {children}
+          </div>
+        </UserProvider>
       </body>
     </html>
   );
