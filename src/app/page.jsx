@@ -58,28 +58,33 @@ export default function Home() {
 
     window.open(whatsappURL, "_blank");
   };
-
+  const fetchVisitorCount = async () => {
+    try {
+      setV_Loading(true)
+      const res = await axios.get(`${API}/visitor-count`)
+      console.log("Total visitors:", res.data.total)
+      setVisitors(res.data.total)
+    } catch (err) {
+      console.error("Failed to fetch visitor count:", err)
+    } finally {
+      setV_Loading(false)
+    }
+  }
   useEffect(() => {
-    const url = window.location.href;
-    axios.post(`${API}/track-visitor`, { url })
-      .then(() => console.log('Visitor Tracked'))
-      .catch(err => console.error('Tracking failed:', err));
+    const tracked = sessionStorage.getItem('visitorTracked');
+    if (!tracked) {
+      const url = window.location.href;
+      axios.post(`${API}/track-visitor`, { url })
+        .then(() => {
+          console.log('Visitor Tracked');
+          sessionStorage.setItem('visitorTracked', 'true');
+          fetchVisitorCount();
+        })
+        .catch(err => console.error('Tracking failed:', err));
+    }
   }, []);
 
   useEffect(() => {
-    const fetchVisitorCount = async () => {
-      try {
-        setV_Loading(true)
-        const res = await axios.get(`${API}/visitor-count`)
-        console.log("Total visitors:", res.data.total)
-        setVisitors(res.data.total)
-      } catch (err) {
-        console.error("Failed to fetch visitor count:", err)
-      } finally {
-        setV_Loading(false)
-      }
-    }
-
     fetchVisitorCount()
   }, [])
 
