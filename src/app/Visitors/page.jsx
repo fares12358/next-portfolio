@@ -11,14 +11,18 @@ const Page = () => {
     const [data, setData] = useState([]);
     const [loader, setLoader] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
+    const { isAdminLoged, setIsAdminLoged } = useUser();
     // const API = 'http://localhost:5000';
     const API = 'https://node-portfolio-back-end-eight.vercel.app';
-    const { isAdminLoged, setIsAdminLoged } = useUser();
-
+    const token =process.env.API_SECRET_TOKEN;
     const getVisitor = async () => {
         try {
             setLoader(true);
-            const res = await axios.get(`${API}/get_visitors`);
+            const res = await axios.get(`${API}/get_visitors`, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                }
+            });
             console.log("Response data:", res.data);
             if (Array.isArray(res.data.data) && res.data.data.length > 0) {
                 setData(res.data.data[0].visits);
