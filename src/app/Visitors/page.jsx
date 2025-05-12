@@ -14,7 +14,8 @@ const Page = () => {
     const { isAdminLoged, setIsAdminLoged } = useUser();
     // const API = 'http://localhost:5000';
     const API = 'https://node-portfolio-back-end-eight.vercel.app';
-    const token =process.env.API_SECRET_TOKEN;
+    // const token = process.env.API_SECRET_TOKEN;
+    const token ="f9b8c1d45e3a4f6789b12c34d5e67f890a1b23c45d6e78f90b12c34d5e67f890";
     const getVisitor = async () => {
         try {
             setLoader(true);
