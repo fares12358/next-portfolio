@@ -9,8 +9,8 @@ const AdminVisitor = () => {
     const [Error, setError] = useState('');
     const [loader, setloader] = useState(false);
     const { isAdminLoged, setIsAdminLoged } = useUser();
-    const API = "http://localhost:5000"
-    // const API = 'https://node-portfolio-back-end-eight.vercel.app';
+    // const API = "http://localhost:5000"
+    const API = 'https://node-portfolio-back-end-eight.vercel.app';
     const onSubmit = async (e) => {
         e.preventDefault();
         if (passInput === '') {
