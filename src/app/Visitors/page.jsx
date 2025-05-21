@@ -1,50 +1,55 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-import BgAnim from '../components/BgAnim'
-import axios from 'axios'
+import React, { useEffect, useRef, useState } from 'react'
 import MyLoader from '../components/MyLoader'
 import AdminVisitor from '../components/AdminVisitor'
 import Link from 'next/link'
 import { useUser } from '../context/UserContext'
+import { getVisitors } from '../api/API_Requestes'
 
 const Page = () => {
-    const [data, setData] = useState([]);
-    const [loader, setLoader] = useState(false);
-    const [isVisible, setIsVisible] = useState(false);
-    const { isAdminLoged, setIsAdminLoged } = useUser();
-    // const API = 'http://localhost:5000';
-    const API = 'https://node-portfolio-back-end-eight.vercel.app';
-    // const token = process.env.API_SECRET_TOKEN;
-    const token ="f9b8c1d45e3a4f6789b12c34d5e67f890a1b23c45d6e78f90b12c34d5e67f890";
-    const getVisitor = async () => {
-        try {
-            setLoader(true);
-            const res = await axios.get(`${API}/get_visitors`, {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                }
-            });
-            console.log("Response data:", res.data);
-            if (Array.isArray(res.data.data) && res.data.data.length > 0) {
-                setData(res.data.data[0].visits);
-            } else {
-                setData([]);
-            }
-        } catch (error) {
-            console.error("Error fetching visitors:", error);
-        } finally {
-            setLoader(false);
-        }
-    };
+    const { isAdminLoged, setIsAdminLoged, data, setData, loader, setLoader } = useUser();
 
-    useEffect(() => {
-        getVisitor();
-    }, []);
+    // track when we last fetched (ms since epoch)
+    const [lastFetched, setLastFetched] = useState(0)
+
+
+    const fetchVisitorData = async () => {
+        if (data.length > 0) return
+        setLoader(true)
+        try {
+            const visitors = await getVisitors()
+            if (Array.isArray(visitors) && visitors.length > 0) {
+                setData(visitors[0].visits)
+            } else {
+                setData([])
+            }
+            setLastFetched(Date.now())    // ✅ record when we fetched
+        } catch (err) {
+            console.error('Error fetching visitors:', err)
+        } finally {
+            setLoader(false)
+        }
+    }
 
     const handleLogout = (e) => {
-        e.preventDefault();
-        setIsAdminLoged(false);
+        e.preventDefault()
+        setIsAdminLoged(false)
+        setData([])
+        setLastFetched(0)              // reset so next login will refetch
     }
+
+
+    useEffect(() => {
+        if (!isAdminLoged) return
+
+        const now = Date.now()
+        // if never fetched OR it's been more than an hour (3600_000 ms)
+        if (!lastFetched || now - lastFetched > 3_600_000) {
+            fetchVisitorData()
+        }
+    }, [isAdminLoged, lastFetched])
+
+
     return (
         !isAdminLoged ?
             <AdminVisitor />

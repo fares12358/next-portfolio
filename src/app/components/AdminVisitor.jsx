@@ -1,16 +1,15 @@
-import axios from 'axios';
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import MyLoader from './MyLoader';
 import { useUser } from '../context/UserContext';
+import { adminLogin } from '../api/API_Requestes';
 
 const AdminVisitor = () => {
-    const [passInput, setpassInput] = useState('')
+    const [passInput, setpassInput] = useState('fm01124711424')
     const [Error, setError] = useState('');
     const [loader, setloader] = useState(false);
     const { isAdminLoged, setIsAdminLoged } = useUser();
-    // const API = "http://localhost:5000"
-    const API = 'https://node-portfolio-back-end-eight.vercel.app';
+
     const onSubmit = async (e) => {
         e.preventDefault();
         if (passInput === '') {
@@ -19,9 +18,9 @@ const AdminVisitor = () => {
         }
         try {
             setloader(true);
-            const res = await axios.post(`${API}/adminLogin`, { password: passInput });
-            if (res.data.isAdmin) {
-                console.log(res.data);
+            const data = await adminLogin(passInput);
+            if (data.isAdmin) {
+                console.log(data);
                 setError('');
                 setIsAdminLoged(true);
             } else {
@@ -29,24 +28,26 @@ const AdminVisitor = () => {
             }
         } catch (error) {
             console.error("Error API request:", error);
+            setError("Something went wrong. Please try again.");
         } finally {
             setloader(false);
-
         }
     }
-   
-  useEffect(() => {
-    const timer = setTimeout(() => {
-        setError('');
-    }, 3000);
 
-    return () => clearTimeout(timer);
-  }, [Error]);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setError('');
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, [Error]);
+
     return (
         <div className='w-full h-full bg-myBlack absolute top-0 left-0 z-50 flex items-center justify-center'>
-            <form className="md:py-20 py-10 md:px-10 p-5 flex flex-col items-center justify-center gap-10 max-w-[80%] shadow-my rounded-xl">
-                <h2 className='text-xl font-bold uppercase text-white '>login</h2>
-                <input onChange={(e) => setpassInput(e.target.value)} value={passInput} type="password" placeholder='Enter Admin password' className='md:px-5 px-3 md:py-3 py-2 bg-transparent placeholder:text-white border border-white focus:border-myGreen rounded-md text-md font-semibold text-myGreen focus:outline-none outline-none' />
+            <form className="md:py-20 py-10 md:px-10 p-5 flex flex-col items-center justify-center gap-10 w-[500px] max-w-[90%] shadow-my rounded-xl">
+                <h2 className='text-xl md:text-4xl font-bold uppercase text-white '>login</h2>
+                <input onChange={(e) => setpassInput(e.target.value)} value={passInput} type="password" placeholder='Enter Admin password'
+                    className='md:px-5 px-3 md:py-3 py-2 w-[90%] bg-transparent placeholder:text-white border border-white focus:border-myGreen rounded-md text-md font-semibold text-myGreen focus:outline-none outline-none' />
                 {
                     loader ?
                         <MyLoader />

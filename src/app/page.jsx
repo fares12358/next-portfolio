@@ -12,15 +12,14 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { getDataFromGithub } from "@/utils/APIGithub";
 import MyLoader from "./components/MyLoader";
-import axios from 'axios';
 import Link from "next/link";
+import FormData from "./components/FormData";
+import { useUser } from "./context/UserContext";
 export default function Home() {
-  const API = 'https://node-portfolio-back-end-eight.vercel.app';
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [Error, setError] = useState("");
-  const [vistors, setVisitors] = useState(null);
-  const [V_loading, setV_Loading] = useState(false)
+  const { vistors, setVisitors, V_loading, setV_Loading, onClose, setOnClose } = useUser();
 
   const getCv = (e) => {
     e.preventDefault();
@@ -58,38 +57,13 @@ export default function Home() {
 
     window.open(whatsappURL, "_blank");
   };
-  const fetchVisitorCount = async () => {
-    try {
-      setV_Loading(true)
-      const res = await axios.get(`${API}/visitor-count`)
-      console.log("Total visitors:", res.data.total)
-      setVisitors(res.data.total)
-    } catch (err) {
-      console.error("Failed to fetch visitor count:", err)
-    } finally {
-      setV_Loading(false)
-    }
-  }
-  useEffect(() => {
-    const tracked = sessionStorage.getItem('visitorTracked');
-    if (!tracked) {
-      const url = window.location.href;
-      axios.post(`${API}/track-visitor`, { url })
-        .then(() => {
-          console.log('Visitor Tracked');
-          sessionStorage.setItem('visitorTracked', 'true');
-          fetchVisitorCount();
-        })
-        .catch(err => console.error('Tracking failed:', err));
-    }
-  }, []);
-
-  useEffect(() => {
-    fetchVisitorCount()
-  }, [])
+  
 
   return (
     <section className=" w-full h-[calc(100%-80px)] bg-transparent grid grid-cols-2 md:px-10 px-0 py-5">
+      {
+        onClose ? '' : <FormData />
+      }
       <Link href={'/Visitors'} className="absolute bottom-5 right-5 flex items-center justify-center gap-1 text-white font-bold">
         {
           V_loading ?
