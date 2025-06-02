@@ -5,7 +5,7 @@ import { useUser } from '../context/UserContext';
 import { adminLogin } from '../api/API_Requestes';
 
 const AdminVisitor = () => {
-    const [passInput, setpassInput] = useState('fm01124711424')
+    const [passInput, setpassInput] = useState('')
     const [Error, setError] = useState('');
     const [loader, setloader] = useState(false);
     const { isAdminLoged, setIsAdminLoged } = useUser();
