@@ -5,29 +5,33 @@ import Experience from "../components/Experience";
 import Education from "../components/Education";
 import Skills from "../components/Skills";
 import About from "../components/About";
+import Charts from "../components/Charts/Charts";
 const page = () => {
-  const [component, setComponent] = useState(<Experience indexD={0} />);
-  const [mark, setMark] = useState(1);
-  const getComponent = (e) => {
-    event.preventDefault();   
-    if (e === 1) {
-      setComponent(<Experience indexD={1} />);
-      setMark(1);
-    } else if (e === 2) {
-      setComponent(<Education />);
-      setMark(2);
-    } else if (e === 3) {
-      setComponent(<Skills />);
-      setMark(3);
-    } else {
-      setComponent(<About />);
-      setMark(4);
-    }
-  };
+
+  // const [component, setComponent] = useState(<Experience indexD={0} />);
+  // const [mark, setMark] = useState(1);
+
+  // const getComponent = (e) => {
+  //   event.preventDefault();
+  //   if (e === 1) {
+  //     setComponent(<Experience indexD={1} />);
+  //     setMark(1);
+  //   } else if (e === 2) {
+  //     setComponent(<Education />);
+  //     setMark(2);
+  //   } else if (e === 3) {
+  //     setComponent(<Skills />);
+  //     setMark(3);
+  //   } else {
+  //     setComponent(<About />);
+  //     setMark(4);
+  //   }
+  // };
+
   return (
-    <section className=" w-full h-[calc(100%-80px)] bg-transparent grid xl:grid-cols-3 grid-cols-1 md:p-20 py-20 px-0 overflow-auto main">
+    <section className=" w-full h-[calc(100%-80px)] bg-transparent flex flex-col md:p-20 py-20 px-0 overflow-auto main">
       <BgAnim />
-      <div className="flex flex-col items-center justify-around h-[350px] text-white font-bold mb-10">
+      {/* <div className="flex flex-col items-center justify-around h-[350px] text-white font-bold mb-10">
         <div
           className={`shadow-my  md:text-xl text-base md:px-15 px-2 py-4 rounded-md w-[250px] flex items-center justify-center cursor-pointer opacity-0 translate-y-3 anim-view relative ${mark == 1 ? 'bg-myGreen text-black' : 'bg-myBlack text-white'}`}
           style={{ animationDelay: "0.6s" }}
@@ -56,8 +60,13 @@ const page = () => {
         >
           About me
         </div>
-      </div>
-      <div className="col-span-2 py-5">{component}</div>
+      </div> 
+      <div className="col-span-2 py-5">{component}</div> */}
+      <Experience />
+      <Education />
+      <Skills />
+      <About />
+
     </section>
   );
 };

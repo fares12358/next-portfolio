@@ -38,6 +38,14 @@ export const skillsIcon = [
 ];
 export const list = [
   [
+    "Task Manager website",
+    "A simple design Task Manager website with MERN Stack",
+    "Javascript , react , Tailwind , mongoDB, Express and nodejs",
+    "https://github.com/fares12358/Task_manager",
+    "https://task-manager-bice-xi.vercel.app/",
+    "/images/task_manger.png"
+  ],
+  [
     "Dental booking website",
     "A simple design dentelcare booking website with admin Dashboard",
     "Javascript , react and Tailwind",
@@ -93,5 +101,5 @@ export const list = [
     "https://fares12358.github.io/island/",
     "/images/island.webp"
   ],
-  
+
 ];

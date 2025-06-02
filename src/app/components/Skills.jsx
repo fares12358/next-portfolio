@@ -7,13 +7,13 @@ const Skills = () => {
     <div className="text-white p-5 flex flex-col justify-center items-center text-center md:text-left md:items-start">
       <h1
         className="md:text-5xl text-4xl font-bold my-5 opacity-0 translate-y-3 anim-view relative"
-        style={{ animationDelay: "0.0s" }}
+        style={{ animationDelay: "1.4s" }}
       >
         Skills
       </h1>
       <p
         className="text-neutral-500 font-base md:text-lg text-sm opacity-0 translate-y-3 anim-view relative mb-5"
-        style={{ animationDelay: "0.1s" }}
+        style={{ animationDelay: "1.5s" }}
       >
         Proficient in creating structured and semantic web pages using
         <span className="text-myGreen">HTML5</span>. Skilled in designing responsive and visually appealing layouts with
@@ -37,10 +37,10 @@ const Skills = () => {
         <span className="text-myGreen">Express</span> to handle requests from APIs, and
         <span className="text-myGreen">Node.js</span> for server-side development and backend logic.
       </p>
-      <div className="col-span-3 self-center  flex items-center justify-center opacity-0 anim-view" style={{ animationDelay: "0.2s" }}>
+      <div className="col-span-3 self-center  flex items-center justify-center opacity-0 anim-view" style={{ animationDelay: "1.0s" }}>
         <LineSkills isIcon={false} direction={true} data={skillsItems} />
       </div>
-      <div className="col-span-3 self-center  flex items-center justify-center opacity-0 anim-view" style={{ animationDelay: "0.3s" }}>
+      <div className="col-span-3 self-center  flex items-center justify-center opacity-0 anim-view" style={{ animationDelay: "1.0s" }}>
         <LineSkills isIcon={true} direction={false} data={skillsIcon} />
       </div>
     </div>
